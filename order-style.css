@@ -43,7 +43,7 @@ html, body, .content {
   inset: 0;
   z-index: 0;
   overflow: hidden;
-  background: url('assets/images/background.jpg') no-repeat center center;
+  background: url('background.jpg') no-repeat center center;
   background-size: cover;
 }
 

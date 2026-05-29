@@ -121,6 +121,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// Initialize Toast Container for Premium Feedback
+const toastContainer = document.createElement('div');
+toastContainer.className = 'toast-wrap';
+document.body.appendChild(toastContainer);
+
+// Premium Toast Notification Function
+window.showToast = function(message) {
+  const toast = document.createElement('div');
+  toast.className = 'toast';
+  toast.innerHTML = `
+    <span>💧</span>
+    <span>${message}</span>
+    <div class="toast-progress"></div>
+  `;
+  toastContainer.appendChild(toast);
+  
+  setTimeout(() => {
+    toast.classList.add('removing');
+    setTimeout(() => {
+      toast.remove();
+    }, 400);
+  }, 3000);
+}
+
 // Add Item to Cart
 window.addToCart = function(productId) {
   cart[productId] = (cart[productId] || 0) + 1;
@@ -128,6 +152,12 @@ window.addToCart = function(productId) {
   // Update UI and Open Drawer
   updateCartUI();
   toggleCartDrawer(true);
+  
+  // Show premium toast feedback
+  const prod = products[productId];
+  if (prod) {
+    showToast(`${prod.name} added to cart successfully!`);
+  }
   
   // Highlight inline card action momentarily
   const btn = document.querySelector(`#action-${productId} .add-to-cart-btn`);

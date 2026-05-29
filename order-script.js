@@ -83,6 +83,44 @@ window.toggleCartDrawer = function(isOpen) {
   }
 }
 
+// Toggle Mobile Menu Drawer
+window.toggleMobileMenu = function(isOpen) {
+  const menu = document.getElementById('mobileMenu');
+  const btn = document.getElementById('mobileMenuBtn');
+  if (menu && btn) {
+    if (isOpen === undefined) {
+      menu.classList.toggle('open');
+      btn.classList.toggle('active');
+    } else if (isOpen) {
+      menu.classList.add('open');
+      btn.classList.add('active');
+    } else {
+      menu.classList.remove('open');
+      btn.classList.remove('active');
+    }
+  }
+}
+
+// Add Click listener to Mobile Menu Button
+document.addEventListener('DOMContentLoaded', () => {
+  const btn = document.getElementById('mobileMenuBtn');
+  if (btn) {
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      toggleMobileMenu();
+    });
+  }
+  
+  // Close mobile menu if clicked outside
+  document.addEventListener('click', (e) => {
+    const menu = document.getElementById('mobileMenu');
+    const btn = document.getElementById('mobileMenuBtn');
+    if (menu && menu.classList.contains('open') && !menu.contains(e.target) && e.target !== btn) {
+      toggleMobileMenu(false);
+    }
+  });
+});
+
 // Add Item to Cart
 window.addToCart = function(productId) {
   cart[productId] = (cart[productId] || 0) + 1;
@@ -166,6 +204,10 @@ window.updateCartUI = function() {
   if (badge) {
     badge.textContent = totalItems;
     badge.style.display = totalItems > 0 ? 'inline-block' : 'none';
+  }
+  const mobileBadge = document.getElementById('mobileCartBadge');
+  if (mobileBadge) {
+    mobileBadge.textContent = totalItems;
   }
 
   // Handle Empty State

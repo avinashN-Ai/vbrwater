@@ -114,7 +114,29 @@
         </button>
       </li>
     </ul>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle Menu">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </button>
   </nav>
+
+  <!-- Mobile Menu Drawer Overlay Panel -->
+  <div class="mobile-menu" id="mobileMenu">
+    <ul>
+      <li><a href="index.html" onclick="toggleMobileMenu(false)">Home</a></li>
+      <li><a href="#products-section" onclick="toggleMobileMenu(false)">Shop Products</a></li>
+      <li><a href="#purification-section" onclick="toggleMobileMenu(false)">Purification</a></li>
+      <li><a href="#footer-section" onclick="toggleMobileMenu(false)">Contact Us</a></li>
+      <li>
+        <a href="javascript:void(0)" onclick="toggleMobileMenu(false); toggleCartDrawer(true)" style="color: var(--neon-blue); font-weight: 700;">
+          🛒 View Cart (<span id="mobileCartBadge">0</span>)
+        </a>
+      </li>
+    </ul>
+  </div>
 
   <!-- MAIN SCROLLABLE CONTENT -->
   <div class="content">

@@ -9,13 +9,7 @@
   "orientation": "portrait",
   "icons": [
     {
-      "src": "logo.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "logo_crest.png",
+      "src": "app_icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"

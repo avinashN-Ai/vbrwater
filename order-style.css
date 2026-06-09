@@ -2092,7 +2092,7 @@ footer {
 /*  RESPONSIVE LAYOUTS                         */
 /* ═══════════════════════════════════════════ */
 
-@media (max-width: 960px) {
+@media (max-width: 992px) {
   nav {
     padding: 14px 6%;
   }
@@ -3035,6 +3035,11 @@ footer {
   border-color: #fd1d1d;
   box-shadow: 0 4px 15px rgba(253, 29, 29, 0.35);
 }
+.social-fab.fb:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  box-shadow: 0 4px 15px rgba(24, 119, 242, 0.35);
+}
 
 /* Links columns */
 .footer-col-links h4,
@@ -3673,7 +3678,63 @@ footer {
 
 @media (max-width: 600px) {
   .products-shop-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+  }
+  
+  .products-shop-grid .product-shop-card {
+    padding: 16px 10px;
+    border-radius: 6px;
+  }
+  
+  .products-shop-grid .prod-badge-overlay {
+    top: 8px;
+    left: 8px;
+    font-size: 8px;
+    padding: 2px 6px;
+  }
+  
+  .products-shop-grid .prod-image-container {
+    height: 110px;
+    margin-bottom: 12px;
+  }
+  
+  .products-shop-grid .prod-card-title {
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 4px;
+  }
+  
+  .products-shop-grid .prod-card-desc {
+    font-size: 9px;
+    line-height: 1.35;
+    margin-bottom: 8px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 25px;
+  }
+  
+  .products-shop-grid .prod-card-price-row {
+    flex-direction: column;
+    gap: 2px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+  
+  .products-shop-grid .price-val {
+    font-size: 13px;
+  }
+  
+  .products-shop-grid .price-unit {
+    font-size: 8px;
+  }
+  
+  .products-shop-grid .add-to-cart-btn {
+    padding: 8px 6px;
+    font-size: 8px;
+    letter-spacing: 0.5px;
   }
   
   .cart-drawer {
@@ -3827,5 +3888,36 @@ footer {
     font-size: 11.5px;
     padding: 12px 18px;
   }
+}
+
+.wa-btn {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  padding: 12px 20px;
+  height: 48px;
+  background: linear-gradient(135deg, #25d366, #128c7e);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 20px;
+  text-decoration: none;
+  box-shadow: 0 6px 24px rgba(37, 211, 102, .4);
+  z-index: 9999;
+  transition: all .3s;
+}
+.wa-btn::after {
+  content: 'Book Free Water Test';
+  font-size: 10px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+}
+.wa-btn:hover {
+  transform: scale(1.05) translateY(-2px);
 }
 

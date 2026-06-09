@@ -1,4 +1,4 @@
-const CACHE_NAME = 'quera-water-v1';
+const CACHE_NAME = 'quera-water-v3';
 const ASSETS = [
   './index.html',
   './order.html',
@@ -11,7 +11,19 @@ const ASSETS = [
   './bottle-750ml.png',
   './bottle-1l.png',
   './bbottle-200ml.png',
-  './manifest.json'
+  './manifest.json',
+  './app_icon.png',
+  './hero-model.jpg',
+  './gallery-purple.jpg',
+  './gallery-poster-1.jpg',
+  './gallery-poster-2.jpg',
+  './gallery-poster-4.jpg',
+  './gallery-tube.jpg',
+  './gallery-can.jpg',
+  './bunty_new.jpg',
+  './operations.jpg',
+  './avinash.jpg',
+  './debolina.jpg'
 ];
 
 // Install Service Worker

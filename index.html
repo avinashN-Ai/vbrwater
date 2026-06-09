@@ -3,33 +3,57 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QUERA WATER — Premium Packaged Drinking Water</title>
-  <meta name="description" content="QUERA WATER is a premium packaged drinking water brand. FSSAI certified, 5-stage purified water in 200ml, 500ml & 1L bottles. Custom branded labels for hotels, resorts & restaurants.">
-  <meta name="keywords" content="packaged drinking water, premium water, QUERA WATER, custom branded water bottles, hospitality water supply, FSSAI certified water, hotel water bottles, purified drinking water India">
+  <title>QUERA WATER — Premium Natural Mineral Water &amp; Packaged Drinking Water India</title>
+  <meta name="description" content="QUERA WATER is a premium water brand operated by VBR BROTHERS. FSSAI certified Natural Mineral Water &amp; Packaged Drinking Water solutions across India.">
+  <meta name="keywords" content="natural mineral water, packaged drinking water, premium water, QUERA WATER, custom branded water bottles, VBR BROTHERS, luxury water bottles, hotel water bottles, corporate branding bottles">
   <meta name="author" content="QUERA WATER">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a2342">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="QUERA WATER — Premium Packaged Drinking Water">
-  <meta property="og:description" content="Premium FSSAI certified packaged drinking water with custom branding for hotels, resorts & restaurants.">
+  <meta property="og:title" content="QUERA WATER — Premium Natural Mineral &amp; Packaged Drinking Water">
+  <meta property="og:description" content="FSSAI &amp; BIS certified Premium Natural Mineral Water &amp; Packaged Drinking Water. Serving luxury hotels, banquets, corporates, and events across India.">
   <meta property="og:site_name" content="QUERA WATER">
   <link rel="manifest" href="manifest.json">
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Montserrat:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root {
-      --ice-white: #e8f4f8;
+      --ice-white: #ffffff;
       --glacier-blue: #a8d8ea;
-      --deep-water: #0a2342;
-      --mountain-teal: #1a6b7a;
+      --deep-water: #081120;
+      --mountain-teal: #0066ff;
       --sky-light: #c9e8f0;
-      --dark-navy: #061525;
-      --teal-accent: #2bbcd4;
-      --gold-accent: #c9a84c;
-      --text-dark: #0d1f2d;
+      --dark-navy: #081120;
+      --teal-accent: #00d4ff;
+      --gold-accent: #ffb703;
+      --text-dark: #ffffff;
+      
+      --card-bg: rgba(10, 36, 70, 0.45);
+      --card-border: rgba(0, 210, 255, 0.15);
+      --sec-text: rgba(255, 255, 255, 0.7);
     }
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body.light-theme {
+      --ice-white: #081120;
+      --glacier-blue: #0066ff;
+      --deep-water: #ffffff;
+      --mountain-teal: #1a6b7a;
+      --sky-light: #00d4ff;
+      --dark-navy: #f4f9fc;
+      --teal-accent: #0066ff;
+      --gold-accent: #c9a84c;
+      --text-dark: #081120;
+      
+      --card-bg: rgba(255, 255, 255, 0.85);
+      --card-border: rgba(0, 102, 255, 0.15);
+      --sec-text: rgba(8, 17, 32, 0.7);
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    .btn-primary, .btn-submit, .nav-links a, .nav-cta, .lightbox-close, .hamburger {
+      user-select: none;
+      -webkit-user-select: none;
+    }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Montserrat', sans-serif; background: var(--dark-navy); color: var(--text-dark); overflow-x: hidden; }
+    body { font-family: 'Montserrat', sans-serif; background: var(--dark-navy); color: var(--text-dark); overflow-x: hidden; transition: background 0.4s ease, color 0.4s ease; }
+    p { color: var(--sec-text); transition: color 0.4s ease; }
 
     /* ─── SCENE BACKGROUND ─── */
     .scene { position: fixed; inset: 0; z-index: 0; overflow: hidden; background: url('background.jpg') no-repeat center center; background-size: cover; }
@@ -84,7 +108,7 @@
     /* HERO */
     .hero {
       min-height:100vh;display:flex;align-items:center;justify-content:center;
-      flex-direction:column;text-align:center;padding:120px 5% 80px;position:relative;
+      flex-direction:column;text-align:center;padding:120px 5% 150px;position:relative;
     }
     .hero-badge {
       display:inline-flex;align-items:center;gap:8px;
@@ -134,7 +158,7 @@
     }
     .btn-ghost:hover { background:rgba(255,255,255,.1);border-color:var(--teal-accent);color:var(--glacier-blue); }
     .hero-scroll {
-      position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+      position:absolute;bottom:24px;left:50%;transform:translateX(-50%);
       display:flex;flex-direction:column;align-items:center;gap:8px;
       color:rgba(255,255,255,.4);font-size:9px;letter-spacing:3px;text-transform:uppercase;animation:fU 1s ease .7s both;
     }
@@ -293,8 +317,9 @@
     .btn-submit:hover { transform:translateY(-2px);box-shadow:0 12px 32px rgba(43,188,212,.4); }
 
     /* WHATSAPP */
-    .wa-btn { position:fixed;bottom:32px;right:32px;z-index:200;width:58px;height:58px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:26px;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.4);animation:waPulse 2.5s ease-in-out infinite;transition:transform .3s; }
-    .wa-btn:hover { transform:scale(1.12); }
+    .wa-btn { position:fixed;bottom:32px;right:32px;z-index:200;padding:12px 20px;height:48px;background:linear-gradient(135deg,#25d366,#128c7e);border-radius:50px;display:flex;align-items:center;gap:8px;font-size:20px;text-decoration:none;box-shadow:0 6px 24px rgba(37,211,102,.4);animation:waPulse 2.5s ease-in-out infinite;transition:all .3s; }
+    .wa-btn::after { content: 'Book Free Water Test'; font-size: 10px; font-weight: 700; color: white; letter-spacing: 1px; text-transform: uppercase; font-family: 'Montserrat', sans-serif; white-space: nowrap; }
+    .wa-btn:hover { transform:scale(1.05) translateY(-2px); }
     @keyframes waPulse { 0%,100%{box-shadow:0 6px 24px rgba(37,211,102,.4),0 0 0 0 rgba(37,211,102,.4)} 50%{box-shadow:0 6px 24px rgba(37,211,102,.5),0 0 0 12px rgba(37,211,102,0)} }
 
     /* FOOTER */
@@ -658,6 +683,240 @@
       transform: translateY(-2px);
     }
 
+    /* ─── BUBBLES ANIMATION ─── */
+    .hero-bubble {
+      position: absolute;
+      bottom: -60px;
+      background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.45) 0%, rgba(0, 212, 255, 0.15) 60%, rgba(255, 255, 255, 0) 70%);
+      border: 1px solid rgba(255, 255, 255, 0.25);
+      border-radius: 50%;
+      pointer-events: none;
+      box-shadow: inset 0 0 10px rgba(255, 255, 255, 0.2), 0 0 15px rgba(0, 212, 255, 0.15);
+      animation: floatUp 8s ease-in infinite;
+    }
+    @keyframes floatUp {
+      0% { transform: translateY(0) translateX(0) scale(1); opacity: 0; }
+      10% { opacity: 0.8; }
+      90% { opacity: 0.8; }
+      100% { transform: translateY(-105vh) translateX(var(--drift)) scale(1.1); opacity: 0; }
+    }
+
+    /* ─── MOUSE WATER CLICK RIPPLES ─── */
+    .click-ripple {
+      position: fixed;
+      border: 2px solid var(--teal-accent);
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%) scale(0);
+      opacity: 0.8;
+      z-index: 9999;
+      animation: rippleEffect 0.8s cubic-bezier(0.1, 0.8, 0.3, 1) forwards;
+    }
+    @keyframes rippleEffect {
+      to { transform: translate(-50%, -50%) scale(10); opacity: 0; border-width: 0.5px; }
+    }
+
+    /* ─── GLASSMORPHISM HERO BUTTONS ─── */
+    .btn-hero-glass {
+      background: rgba(255, 255, 255, 0.05) !important;
+      backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15) !important;
+      color: white !important;
+      box-shadow: 0 8px 32px 0 rgba(8, 17, 32, 0.37);
+      transition: all 0.4s ease !important;
+    }
+    .btn-hero-glass:hover {
+      background: rgba(0, 212, 255, 0.15) !important;
+      border-color: var(--teal-accent) !important;
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.4) !important;
+      transform: translateY(-2px) !important;
+    }
+
+    /* ─── 3D CARD PERSPECTIVE & DROPS ─── */
+    .perspective-container {
+      perspective: 1000px;
+    }
+    .perspective-card {
+      transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.5s ease, background 0.4s ease, border-color 0.4s ease;
+      transform-style: preserve-3d;
+      position: relative;
+    }
+    .perspective-card:hover {
+      box-shadow: 0 30px 60px rgba(0, 212, 255, 0.25) !important;
+    }
+    .perspective-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0) 30%, rgba(255, 255, 255, 0.12) 50%, rgba(255, 255, 255, 0) 70%);
+      transform: translateX(-100%);
+      transition: transform 0.6s ease;
+      pointer-events: none;
+      z-index: 10;
+    }
+    .perspective-card:hover::after {
+      transform: translateX(100%);
+    }
+
+    /* ─── STATS COUNTER STRIP ─── */
+    .stats-strip {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+      padding: 40px;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      backdrop-filter: blur(20px);
+      transition: all 0.4s ease;
+    }
+    .stat-counter-pill {
+      text-align: center;
+      flex: 1 1 20%;
+      min-width: 180px;
+    }
+    .stat-counter-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--teal-accent);
+      display: block;
+      margin-bottom: 6px;
+      transition: color 0.4s ease;
+    }
+    .stat-counter-lbl {
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--sec-text);
+      text-transform: uppercase;
+      transition: color 0.4s ease;
+    }
+
+    /* ─── INTERACTIVE TIMELINE ─── */
+    .timeline-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 60px auto 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 20px;
+    }
+    .timeline-progress-line {
+      position: absolute;
+      top: 36px;
+      left: 10%;
+      right: 10%;
+      height: 4px;
+      background: rgba(255, 255, 255, 0.08);
+      z-index: 0;
+    }
+    .timeline-progress-active {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0%;
+      height: 100%;
+      background: linear-gradient(90deg, var(--mountain-teal), var(--teal-accent));
+      box-shadow: 0 0 10px rgba(0, 212, 255, 0.5);
+      transition: width 0.8s ease;
+    }
+    .timeline-node {
+      position: relative;
+      z-index: 2;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .timeline-dot {
+      width: 72px;
+      height: 72px;
+      border-radius: 50%;
+      background: var(--deep-water);
+      border: 3px solid rgba(255, 255, 255, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+      transition: all 0.5s ease;
+    }
+    .timeline-node.active .timeline-dot {
+      border-color: var(--teal-accent);
+      background: var(--card-bg);
+      box-shadow: 0 0 25px rgba(0, 212, 255, 0.35);
+      transform: scale(1.1);
+    }
+    .timeline-info {
+      margin-top: 18px;
+    }
+    .timeline-step {
+      font-size: 9px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--sec-text);
+      display: block;
+      margin-bottom: 6px;
+      transition: color 0.4s ease;
+    }
+    .timeline-node.active .timeline-step {
+      color: var(--teal-accent);
+    }
+    .timeline-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: white;
+      margin-bottom: 8px;
+    }
+    .timeline-node.active .timeline-title {
+      text-shadow: 0 0 10px rgba(255,255,255,0.2);
+    }
+    .timeline-desc {
+      font-size: 11.5px;
+      line-height: 1.6;
+      color: var(--sec-text);
+      max-width: 170px;
+      transition: color 0.4s ease;
+    }
+    @media(max-width: 900px) {
+      .timeline-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 40px;
+      }
+      .timeline-progress-line {
+        top: 10%;
+        bottom: 10%;
+        left: 36px;
+        width: 4px;
+        height: 80%;
+      }
+      .timeline-progress-active {
+        width: 100%;
+        height: 0%;
+        transition: height 0.8s ease;
+      }
+      .timeline-node {
+        flex-direction: row;
+        text-align: left;
+        align-items: center;
+        gap: 20px;
+      }
+      .timeline-info {
+        margin-top: 0;
+      }
+      .timeline-desc {
+        max-width: 100%;
+      }
+    }
     @media(max-width: 900px) {
       .shop-grid {
         grid-template-columns: 1fr 1fr;
@@ -668,9 +927,106 @@
         grid-template-columns: 1fr;
       }
     }
-  </style>
+  
+    /* Footer Social FAB Custom Styling */
+    .social-fab {
+      width: 38px;
+      height: 38px;
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 15px;
+      transition: all 0.3s;
+      color: white;
+    }
+    .social-fab:hover {
+      transform: translateY(-2px);
+    }
+    .social-fab.wa:hover {
+      background: #25d366 !important;
+      border-color: #25d366 !important;
+      box-shadow: 0 4px 15px rgba(37, 211, 102, 0.35) !important;
+    }
+    .social-fab.ig:hover {
+      background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045) !important;
+      border-color: #fd1d1d !important;
+      box-shadow: 0 4px 15px rgba(253, 29, 29, 0.35) !important;
+    }
+    .social-fab.fb:hover {
+      background: #1877f2 !important;
+      border-color: #1877f2 !important;
+      box-shadow: 0 4px 15px rgba(24, 119, 242, 0.35) !important;
+    }
+    </style>
 </head>
 <body>
+
+<!-- ═══ PREMIUM WATER FILL LOADER ═══ -->
+<div id="pwaSplash" style="position:fixed; inset:0; background:#081120; z-index:99999; display:flex; flex-direction:column; align-items:center; justify-content:center; transition: opacity 0.8s ease, visibility 0.8s ease; gap:20px; font-family:'Montserrat',sans-serif;">
+  <style>
+    .loader-glass {
+      position: relative;
+      width: 80px;
+      height: 110px;
+      border: 4px solid var(--teal-accent);
+      border-top: none;
+      border-radius: 0 0 16px 16px;
+      overflow: hidden;
+      box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+    }
+    .loader-glass::before {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, #00d4ff, #0066ff);
+      animation: waterFill 2.5s ease-in-out infinite alternate;
+      transform-origin: bottom center;
+    }
+    .loader-wave {
+      position: absolute;
+      width: 200%;
+      height: 200%;
+      background: rgba(8, 17, 32, 0.95);
+      top: -150%;
+      left: -50%;
+      border-radius: 38%;
+      animation: waveRotate 5s linear infinite;
+    }
+    @keyframes waterFill {
+      0% { transform: translateY(100%); }
+      100% { transform: translateY(0%); }
+    }
+    @keyframes waveRotate {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+    .loader-logo {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 4px;
+      color: white;
+      text-transform: uppercase;
+      text-shadow: 0 0 10px var(--teal-accent);
+      margin-top: 10px;
+      animation: loaderPulse 1.5s ease-in-out infinite;
+    }
+    @keyframes loaderPulse {
+      0%, 100% { opacity: 0.6; transform: scale(0.97); }
+      50% { opacity: 1; transform: scale(1.03); }
+    }
+  </style>
+  <div class="loader-glass">
+    <div class="loader-wave"></div>
+  </div>
+  <div class="loader-logo">QUERA WATER</div>
+</div>
 
 <!-- ═══ ANIMATED SCENE ═══ -->
 <div class="scene">
@@ -762,18 +1118,19 @@
   <!-- NAV -->
   <nav id="navbar">
     <a href="#" class="nav-logo">
-      <img src="logo_crest.png" alt="Quera Logo" class="logo-img">
+      <img src="logo.png" alt="Quera Logo" class="logo-img">
       <span class="nav-text">QUERA <span>WATER</span></span>
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
-      <li><a href="#purity">Purity</a></li>
-      <li><a href="#minerals">Quality</a></li>
-      <li><a href="#hospitality">Hospitality</a></li>
-      <li><a href="#labels">Custom Labels</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#results">Results</a></li>
       <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#testimonials">Reviews</a></li>
+      <li><a href="#team">Our Team</a></li>
       <li><a href="order.html" style="color:var(--teal-accent); font-weight:700;">Shop</a></li>
       <li><a href="#contact" class="nav-cta">Get a Quote</a></li>
+      <li><button id="themeToggle" style="background:none; border:none; color:var(--teal-accent); font-size:16px; cursor:pointer; padding:4px 8px; display:flex; align-items:center;" aria-label="Toggle Theme">🌓</button></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -781,118 +1138,302 @@
   </nav>
 
   <!-- HERO -->
-  <section class="hero" id="home">
-    <div class="hero-badge"><div class="dot"></div> Premium Packaged Drinking Water</div>
-    <h1 class="hero-title">
-      QUERA
-      <strong>WATER</strong>
-    </h1>
-    <p class="hero-sub">Pure · Natural · Pristine</p>
-    <p class="hero-tagline">"Where purity meets perfection, every drop tells a story."</p>
-    <div class="hero-stats">
-      <div class="stat-pill"><span class="val">5</span><span class="lbl">Stage Purification</span></div>
-      <div class="stat-pill"><span class="val">200<small style="font-size:1rem">ml</small></span><span class="lbl">Compact Bottle</span></div>
-      <div class="stat-pill"><span class="val">500<small style="font-size:1rem">ml</small></span><span class="lbl">Standard Bottle</span></div>
-      <div class="stat-pill"><span class="val">1<small style="font-size:1rem">L</small></span><span class="lbl">Large Bottle</span></div>
-      <div class="stat-pill"><span class="val">100<small style="font-size:1rem">%</small></span><span class="lbl">FSSAI Certified</span></div>
-    </div>
-    <div class="hero-btns">
-      <a href="#contact" class="btn-primary">Order Now</a>
-      <a href="#about" class="btn-ghost">Discover More</a>
-    </div>
-    <div class="hero-scroll">
+  <section class="hero" id="home" style="position:relative; overflow:hidden;">
+    <!-- HD Looping Video Background -->
+    <video autoplay loop muted playsinline style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:0; opacity:0.22; pointer-events:none;">
+      <source src="video.mp4" type="video/mp4">
+    </video>
+    
+    <!-- Dynamic Bubbles Container -->
+    <div id="heroBubblesContainer" style="position:absolute; inset:0; pointer-events:none; overflow:hidden; z-index:1;"></div>
+
+    <div style="position:relative; z-index:2; display:flex; flex-direction:column; align-items:center; width:100%;">
+      <div class="hero-badge"><div class="dot"></div> Premium Natural Mineral Water &amp; Packaged Drinking Water</div>
+      <h1 class="hero-title">
+        QUERA
+        <strong style="background: linear-gradient(90deg, var(--teal-accent), var(--mountain-teal)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">WATER</strong>
+      </h1>
+      <p class="hero-sub" style="color:var(--teal-accent); font-weight:700; font-size:1.1rem; letter-spacing:8px; margin-top:10px;">Pure Water. Premium Living.</p>
+      <p class="hero-tagline">"Delivering Premium Natural Mineral Water and Packaged Drinking Water Solutions for Hospitality, Corporate, Retail, and Event Industries Across India."</p>
+      <div class="hero-stats">
+        <div class="stat-pill"><span class="val">5</span><span class="lbl">Stage Purification</span></div>
+        <div class="stat-pill"><span class="val">200<small style="font-size:1rem">ml</small></span><span class="lbl">Compact Bottle</span></div>
+        <div class="stat-pill"><span class="val">500<small style="font-size:1rem">ml</small></span><span class="lbl">Standard Bottle</span></div>
+        <div class="stat-pill"><span class="val">1<small style="font-size:1rem">L</small></span><span class="lbl">Large Bottle</span></div>
+        <div class="stat-pill"><span class="val">100<small style="font-size:1rem">%</small></span><span class="lbl">FSSAI Certified</span></div>
+      </div>
+      <div class="hero-btns">
+        <a href="#contact" class="btn-primary btn-hero-glass" style="background:linear-gradient(135deg, var(--mountain-teal), var(--teal-accent)); border:none;">Book Free Water Test</a>
+        <a href="#contact" class="btn-ghost btn-hero-glass">Get Quote in 30 Mins</a>
+      </div>
+      <div style="margin-top: 24px; font-size: 10px; font-weight: 700; letter-spacing: 2px; color: var(--gold-accent); text-transform: uppercase;">
+        ✦ Service Available Across India ✦ Serving All States &amp; Union Territories
+      </div>
+      <div class="hero-scroll">
       <div class="scroll-mouse"><div class="scroll-dot"></div></div>
       Scroll
     </div>
   </section>
 
-  <!-- ABOUT -->
-  <section id="about" class="sg">
-    <div class="about-grid">
-      <div class="about-text reveal d1">
-        <p class="sec-label">Our Story</p>
-        <h2 class="sec-title lt">Purity <em style="color:var(--teal-accent)">Redefined</em><br>Bottled with Care</h2>
-        <p>QUERA WATER was born from a singular vision — to bring nature's purest essence to every table. We believe that great water is the foundation of great living, and every bottle we produce reflects our unwavering commitment to quality.</p>
-        <p>With state-of-the-art 5-stage purification technology and rigorous FSSAI certified processes, QUERA WATER delivers an uncompromising drinking experience that hotels, resorts, restaurants, and discerning individuals trust every day.</p>
-        <p>Our custom branded label program empowers businesses to elevate their guest experience with water that carries their identity — a seamless extension of their brand.</p>
-        <div class="about-feats">
-          <div class="feat"><div class="ck">✓</div> FSSAI Certified</div>
-          <div class="feat"><div class="ck">✓</div> 5-Stage Purification</div>
-          <div class="feat"><div class="ck">✓</div> Custom Branded Labels</div>
-          <div class="feat"><div class="ck">✓</div> BIS Quality Standards</div>
-          <div class="feat"><div class="ck">✓</div> Hospitality Ready</div>
-          <div class="feat"><div class="ck">✓</div> Bulk Supply Available</div>
+  <!-- TRUST BADGES STRIP -->
+  <section class="sl" style="padding: 40px 5%; background: var(--card-bg); border-bottom: 1px solid var(--card-border); text-align: center; position: relative; z-index: 10; transition: all 0.4s ease;">
+    <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-around; flex-wrap: wrap; gap: 24px; align-items: center;">
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px; color: var(--teal-accent);">✔</span>
+        <div style="text-align: left;">
+          <strong style="color: var(--text-dark); font-size: 13px; display: block; letter-spacing: 1px; transition: color 0.4s ease;">ISO Certified</strong>
+          <span style="color: var(--sec-text); font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.4s ease;">9001:2015 Quality</span>
         </div>
       </div>
-      <div class="reveal d3">
-        <div class="bottle-showcase">
-          <div class="bottle-glow"></div>
-          <div class="bottle-img-wrap">
-            <img src="bottle-200ml.png" alt="QUERA WATER 200ml bottle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div style="display:none;width:120px;height:320px;background:linear-gradient(180deg,rgba(43,188,212,.15),rgba(10,36,70,.6));border:1px solid rgba(43,188,212,.25);border-radius:10px 10px 16px 16px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.6);font-size:11px;letter-spacing:2px;text-align:center;padding:12px">
-              <span style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--glacier-blue);font-weight:700">QUERA<br>WATER</span>
-              <span style="font-size:9px;color:var(--teal-accent);letter-spacing:3px">200 ML</span>
-            </div>
-            <div class="bottle-size-tag">200 ML</div>
-          </div>
-          <div class="bottle-img-wrap">
-            <img src="bottle-750ml.png" alt="QUERA WATER 500ml bottle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div style="display:none;width:130px;height:350px;background:linear-gradient(180deg,rgba(43,188,212,.15),rgba(10,36,70,.6));border:1px solid rgba(43,188,212,.25);border-radius:11px 11px 18px 18px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.6);font-size:11px;letter-spacing:2px;text-align:center;padding:14px">
-              <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--glacier-blue);font-weight:700">QUERA<br>WATER</span>
-              <span style="font-size:9px;color:var(--teal-accent);letter-spacing:3px">500 ML</span>
-            </div>
-            <div class="bottle-size-tag">500 ML</div>
-          </div>
-          <div class="bottle-img-wrap" style="animation-delay:-1s">
-            <img src="bottle-1L.png" alt="QUERA WATER 1L bottle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
-            <div style="display:none;width:150px;height:400px;background:linear-gradient(180deg,rgba(43,188,212,.15),rgba(10,36,70,.6));border:1px solid rgba(43,188,212,.25);border-radius:12px 12px 20px 20px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.6);font-size:11px;letter-spacing:2px;text-align:center;padding:16px">
-              <span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--glacier-blue);font-weight:700">QUERA<br>WATER</span>
-              <span style="font-size:9px;color:var(--teal-accent);letter-spacing:3px">1 L</span>
-            </div>
-            <div class="bottle-size-tag">1 L</div>
-          </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px; color: var(--teal-accent);">✔</span>
+        <div style="text-align: left;">
+          <strong style="color: var(--text-dark); font-size: 13px; display: block; letter-spacing: 1px; transition: color 0.4s ease;">BIS Approved</strong>
+          <span style="color: var(--sec-text); font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.4s ease;">ISI Standards</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px; color: var(--teal-accent);">✔</span>
+        <div style="text-align: left;">
+          <strong style="color: var(--text-dark); font-size: 13px; display: block; letter-spacing: 1px; transition: color 0.4s ease;">Pan-India Supply</strong>
+          <span style="color: var(--sec-text); font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.4s ease;">Serving All States</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px; color: var(--teal-accent);">✔</span>
+        <div style="text-align: left;">
+          <strong style="color: var(--text-dark); font-size: 13px; display: block; letter-spacing: 1px; transition: color 0.4s ease;">RO+UV+Mineral</strong>
+          <span style="color: var(--sec-text); font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.4s ease;">Active Enrichment</span>
+        </div>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px;">
+        <span style="font-size: 20px; color: var(--teal-accent);">✔</span>
+        <div style="text-align: left;">
+          <strong style="color: var(--text-dark); font-size: 13px; display: block; letter-spacing: 1px; transition: color 0.4s ease;">10,000+ Customers</strong>
+          <span style="color: var(--sec-text); font-size: 10px; letter-spacing: 0.5px; text-transform: uppercase; transition: color 0.4s ease;">Trusted Households</span>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- WATER SERVICES SECTION -->
+  <section id="services" class="sl" style="background: rgba(255,255,255,0.02); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <style>
+      .services-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 32px;
+        max-width: 1200px;
+        margin: 50px auto 0;
+      }
+      .service-card {
+        background: rgba(10, 36, 70, 0.45);
+        border: 1px solid rgba(43, 188, 212, 0.15);
+        border-radius: 6px;
+        padding: 40px;
+        position: relative;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(15px);
+      }
+      .service-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--teal-accent);
+        box-shadow: 0 15px 35px rgba(43, 188, 212, 0.15);
+        background: rgba(10, 36, 70, 0.65);
+      }
+      .service-badge {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        background: rgba(43, 188, 212, 0.15);
+        border: 1px solid rgba(43, 188, 212, 0.3);
+        padding: 4px 12px;
+        border-radius: 50px;
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        color: var(--glacier-blue);
+        text-transform: uppercase;
+      }
+      .service-icon {
+        font-size: 2.8rem;
+        margin-bottom: 20px;
+        display: block;
+      }
+      .service-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2rem;
+        font-weight: 600;
+        color: white;
+        margin-bottom: 14px;
+      }
+      .service-desc {
+        font-size: 13.5px;
+        line-height: 1.75;
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 24px;
+      }
+      .service-benefits {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+      .service-benefits li {
+        font-size: 12px;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.85);
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+      .service-benefits li::before {
+        content: '✓';
+        color: var(--teal-accent);
+        font-weight: bold;
+      }
+      @media(max-width: 900px) {
+        .services-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+        .service-card {
+          padding: 30px 24px;
+        }
+      }
+    </style>
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <p class="sec-label reveal d1" style="justify-content:center">What We Do</p>
+      <h2 class="sec-title lt reveal d2">Premium Water Sourcing &amp; <em style="color:var(--teal-accent)">Bottling</em></h2>
+      <p class="reveal d3" style="color:rgba(255,255,255,.65);max-width:600px;margin:0 auto;font-size:14px;line-height:1.8">
+        We extract crystal-clear natural groundwater from deep underground aquifers, purify it with advanced technologies, enrich it with vital minerals, and bottle it for the ultimate hydration experience.
+      </p>
+    </div>
+
+    <div class="services-grid reveal d2">
+      <!-- Card 1: Sourcing & Extraction -->
+      <div class="service-card">
+        <span class="service-badge">Sourcing</span>
+        <span class="service-icon">⛰️</span>
+        <h3 class="service-title">Underground Sourcing</h3>
+        <p class="service-desc">We extract pristine natural water from deep underground aquifers. Sourcing water from rich underground layers ensures natural pre-filtration and absolute isolation from surface pollutants.</p>
+        <ul class="service-benefits">
+          <li>Extracted from deep underground aquifers</li>
+          <li>Naturally rich in essential trace minerals</li>
+          <li>Untouched by surface chemical run-offs</li>
+          <li>Eco-friendly sourcing and sustainable extraction</li>
+        </ul>
+      </div>
+
+      <!-- Card 2: Packaged Drinking Water -->
+      <div class="service-card">
+        <span class="service-badge">Purity</span>
+        <span class="service-icon">💧</span>
+        <h3 class="service-title">Packaged Drinking Water</h3>
+        <p class="service-desc">Every batch of QUERA Packaged Drinking Water undergoes rigorous multi-stage reverse osmosis (RO) and ultraviolet (UV) sterilization to guarantee 100% microbiological safety.</p>
+        <ul class="service-benefits">
+          <li>Ideal for retail, corporate, and household use</li>
+          <li>FSSAI &amp; BIS quality-certified standards</li>
+          <li>Available in 200ml, 500ml, and 1L bottles</li>
+          <li>Strict daily microbiological lab audits</li>
+        </ul>
+      </div>
+
+      <!-- Card 3: Natural Mineral Water -->
+      <div class="service-card">
+        <span class="service-badge">Premium</span>
+        <span class="service-icon">👑</span>
+        <h3 class="service-title">Natural Mineral Water</h3>
+        <p class="service-desc">For our premium segments, we package natural mineral water containing an optimal balance of healthy minerals like Calcium, Magnesium, and Silica for a smooth, refreshing taste.</p>
+        <ul class="service-benefits">
+          <li>Unmatched premium taste profile</li>
+          <li>Perfect pH level for cellular hydration</li>
+          <li>Strict compliance with natural mineral guidelines</li>
+          <li>Premium designer glass bottle packaging options</li>
+        </ul>
+      </div>
+
+      <!-- Card 4: Customized Business Solutions -->
+      <div class="service-card">
+        <span class="service-badge">B2B Branding</span>
+        <span class="service-icon">🏨</span>
+        <h3 class="service-title">Branding for Hospitality &amp; Events</h3>
+        <p class="service-desc">We specialize in providing high-end custom label bottles for luxury hotel groups, wedding planners, corporate conferences, premium restaurants, and retail brands.</p>
+        <ul class="service-benefits">
+          <li>Custom labels displaying your brand logo</li>
+          <li>Premium packaging matching luxury hotel rooms</li>
+          <li>End-to-end supply chain and flexible shipping</li>
+          <li>Perfect for weddings, lounges, and boardrooms</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
   <!-- PURIFICATION -->
-  <section id="purity">
+  <!-- TIMELINE PURIFICATION SECTION -->
+  <section id="purification-timeline" class="sl" style="background: rgba(255,255,255,0.01); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); overflow:hidden;">
     <div style="max-width:1200px;margin:0 auto;text-align:center">
       <p class="sec-label reveal d1" style="justify-content:center">Science of Purity</p>
-      <h2 class="sec-title lt reveal d2">Our 5-Stage <em style="color:var(--teal-accent)">Purification</em><br>Process</h2>
-      <p class="reveal d3" style="color:rgba(255,255,255,.6);max-width:600px;margin:0 auto;font-size:14px;line-height:1.8">Every drop of QUERA WATER undergoes a rigorous multi-stage purification journey, ensuring absolute safety and exceptional taste.</p>
+      <h2 class="sec-title lt reveal d2">5-Stage <em style="color:var(--teal-accent)">Purification</em> Timeline</h2>
+      <p class="reveal d3" style="color:var(--sec-text);max-width:600px;margin:0 auto;font-size:14px;line-height:1.8">
+        Every drop of QUERA WATER undergoes a rigorous multi-stage purification journey, ensuring absolute safety and exceptional taste.
+      </p>
     </div>
-    <div class="pur-steps">
-      <div class="step-card reveal d1">
-        <div class="step-num">01</div>
-        <div class="step-icon">🪨</div>
-        <div class="step-name">Sediment Filter</div>
-        <p class="step-desc">Removes dirt, dust, rust, and suspended particles larger than 5 microns from raw water.</p>
+
+    <div class="timeline-container reveal d2">
+      <!-- Horizontal active timeline tracing -->
+      <div class="timeline-progress-line">
+        <div class="timeline-progress-active"></div>
       </div>
-      <div class="step-card reveal d2">
-        <div class="step-num">02</div>
-        <div class="step-icon">🌊</div>
-        <div class="step-name">Activated Carbon</div>
-        <p class="step-desc">Eliminates chlorine, chloramines, volatile organic compounds, and odour-causing chemicals.</p>
+
+      <!-- Step 1 -->
+      <div class="timeline-node">
+        <div class="timeline-dot">🪨</div>
+        <div class="timeline-info">
+          <span class="timeline-step">Stage 01</span>
+          <h4 class="timeline-title">Raw Water</h4>
+          <p class="timeline-desc">Initial intake passing through multi-grade sediment filtration to clear suspended dust and rust particles.</p>
+        </div>
       </div>
-      <div class="step-card reveal d3">
-        <div class="step-num">03</div>
-        <div class="step-icon">💎</div>
-        <div class="step-name">RO Membrane</div>
-        <p class="step-desc">Reverse osmosis removes 99.9% of dissolved solids, heavy metals, bacteria, and viruses.</p>
+
+      <!-- Step 2 -->
+      <div class="timeline-node">
+        <div class="timeline-dot">🌊</div>
+        <div class="timeline-info">
+          <span class="timeline-step">Stage 02</span>
+          <h4 class="timeline-title">RO Filtration</h4>
+          <p class="timeline-desc">Reverse Osmosis removes 99.9% of excess dissolved solids, heavy metals, and micro-salts.</p>
+        </div>
       </div>
-      <div class="step-card reveal d4">
-        <div class="step-num">04</div>
-        <div class="step-icon">✨</div>
-        <div class="step-name">UV Sterilisation</div>
-        <p class="step-desc">Ultraviolet light destroys any remaining microorganisms without adding chemicals.</p>
+
+      <!-- Step 3 -->
+      <div class="timeline-node">
+        <div class="timeline-dot">⚡</div>
+        <div class="timeline-info">
+          <span class="timeline-step">Stage 03</span>
+          <h4 class="timeline-title">UV Treatment</h4>
+          <p class="timeline-desc">High-intensity Ultraviolet sterilization blocks and destroys active organic microbes.</p>
+        </div>
       </div>
-      <div class="step-card reveal d5">
-        <div class="step-num">05</div>
-        <div class="step-icon">⚗️</div>
-        <div class="step-name">Mineral Enrichment</div>
-        <p class="step-desc">Essential minerals are re-added in perfect balance for optimal taste and health benefits.</p>
+
+      <!-- Step 4 -->
+      <div class="timeline-node">
+        <div class="timeline-dot">⚗️</div>
+        <div class="timeline-info">
+          <span class="timeline-step">Stage 04</span>
+          <h4 class="timeline-title">Mineral Balance</h4>
+          <p class="timeline-desc">Enriching filtered water with balanced traces of Calcium and Magnesium for a sweet, clean taste.</p>
+        </div>
+      </div>
+
+      <!-- Step 5 -->
+      <div class="timeline-node">
+        <div class="timeline-dot">💧</div>
+        <div class="timeline-info">
+          <span class="timeline-step">Stage 05</span>
+          <h4 class="timeline-title">Pure Drinking</h4>
+          <p class="timeline-desc">Safe, refreshingly light, and FSSAI-certified premium drinking water bottled under sterile seals.</p>
+        </div>
       </div>
     </div>
   </section>
@@ -905,20 +1446,355 @@
       <p class="reveal d3" style="color:rgba(255,255,255,.6);max-width:560px;margin:0 auto;font-size:14px;line-height:1.8">QUERA WATER's mineral composition is scientifically balanced to deliver the ideal pH and taste profile for premium drinking water.</p>
     </div>
     <div class="min-grid">
-      <div class="min-card reveal d1"><span class="min-val">7.2</span><span class="min-param">pH Level</span><p class="min-desc">Perfectly neutral, slightly alkaline for optimum health</p></div>
-      <div class="min-card reveal d2"><span class="min-val">&lt;50</span><span class="min-param">TDS (mg/L)</span><p class="min-desc">Ideal total dissolved solids for clean, crisp taste</p></div>
+      <div class="min-card reveal d1"><span class="min-val">6.5 - 7.0</span><span class="min-param">pH Level</span><p class="min-desc">Perfect neutral range for ideal daily hydration</p></div>
+      <div class="min-card reveal d2"><span class="min-val">100-120</span><span class="min-param">TDS (mg/L)</span><p class="min-desc">Ideal total dissolved solids for clean, crisp taste</p></div>
       <div class="min-card reveal d3"><span class="min-val">12</span><span class="min-param">Calcium (mg/L)</span><p class="min-desc">Supports bone strength and cardiovascular health</p></div>
       <div class="min-card reveal d4"><span class="min-val">4</span><span class="min-param">Magnesium (mg/L)</span><p class="min-desc">Essential mineral for muscle and nerve function</p></div>
       <div class="min-card reveal d5"><span class="min-val">NIL</span><span class="min-param">Bacteria</span><p class="min-desc">Completely free from harmful microorganisms</p></div>
     </div>
   </section>
 
+  <!-- STATISTICS COUNTER STRIP -->
+  <section id="stats-counter" class="sl" style="padding: 60px 5%; background: rgba(255, 255, 255, 0.02); border-bottom: 1px solid rgba(255, 255, 255, 0.06); position: relative; z-index: 10;">
+    <div class="stats-strip reveal d1">
+      <div class="stat-counter-pill">
+        <span class="stat-counter-val" data-target="500000" data-suffix="+">0</span>
+        <span class="stat-counter-lbl">Bottles Delivered</span>
+      </div>
+      <div class="stat-counter-pill">
+        <span class="stat-counter-val" data-target="10" data-suffix="+">0</span>
+        <span class="stat-counter-lbl">Cities Serviced</span>
+      </div>
+      <div class="stat-counter-pill">
+        <span class="stat-counter-val" data-target="1000" data-suffix="+">0</span>
+        <span class="stat-counter-lbl">Happy Clients</span>
+      </div>
+      <div class="stat-counter-pill">
+        <span class="stat-counter-val" data-target="99" data-suffix=".9% Pure">0</span>
+        <span class="stat-counter-lbl">Purity Standard</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE/AFTER RESULTS SHOWCASE -->
+  <section id="results" class="sg" style="background: rgba(6, 18, 34, 0.95); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <style>
+      .results-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        max-width: 1200px;
+        margin: 50px auto 0;
+      }
+      .result-card {
+        background: rgba(10, 36, 70, 0.55);
+        border: 1px solid rgba(43, 188, 212, 0.15);
+        border-radius: 6px;
+        overflow: hidden;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(20px);
+      }
+      .result-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--teal-accent);
+        box-shadow: 0 15px 35px rgba(43, 188, 212, 0.2);
+      }
+      .result-header {
+        background: rgba(43, 188, 212, 0.1);
+        padding: 16px 24px;
+        border-bottom: 1px solid rgba(43, 188, 212, 0.15);
+        font-size: 11px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        color: var(--glacier-blue);
+        text-transform: uppercase;
+      }
+      .result-body {
+        padding: 30px 24px;
+        text-align: center;
+      }
+      .comparison-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 20px;
+        position: relative;
+      }
+      .comparison-arrow {
+        font-size: 24px;
+        color: var(--teal-accent);
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        animation: pulseArrow 2s infinite;
+      }
+      @keyframes pulseArrow {
+        0%, 100% { opacity: 0.5; transform: translate(-50%, -50%) scale(1); }
+        50% { opacity: 1; transform: translate(-50%, -50%) scale(1.15); }
+      }
+      .panel-before, .panel-after {
+        flex: 1;
+        padding: 12px;
+        border-radius: 4px;
+        text-align: center;
+      }
+      .panel-before {
+        background: rgba(255, 77, 77, 0.08);
+        border: 1px solid rgba(255, 77, 77, 0.2);
+        margin-right: 18px;
+      }
+      .panel-after {
+        background: rgba(37, 211, 102, 0.08);
+        border: 1px solid rgba(37, 211, 102, 0.2);
+        margin-left: 18px;
+      }
+      .panel-title {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        display: block;
+      }
+      .panel-before .panel-title { color: #ff4d4d; }
+      .panel-after .panel-title { color: #25d366; }
+      .panel-value {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 2.2rem;
+        font-weight: 700;
+        display: block;
+        line-height: 1.1;
+      }
+      .panel-before .panel-value { color: #ff4d4d; }
+      .panel-after .panel-value { color: #25d366; }
+      .panel-sub {
+        font-size: 9px;
+        color: rgba(255,255,255,0.4);
+        text-transform: uppercase;
+        display: block;
+        margin-top: 4px;
+      }
+      .result-visual-box {
+        width: 100%;
+        height: 140px;
+        background: rgba(0,0,0,0.25);
+        border-radius: 4px;
+        border: 1px solid rgba(255,255,255,0.06);
+        margin-bottom: 20px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .visual-split {
+        width: 100%;
+        height: 100%;
+        display: flex;
+      }
+      .visual-half {
+        flex: 1;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+      }
+      .visual-half-before {
+        background: linear-gradient(135deg, rgba(255, 77, 77, 0.15), rgba(6, 21, 37, 0.9));
+        border-right: 1px dashed rgba(255, 255, 255, 0.2);
+      }
+      .visual-half-after {
+        background: linear-gradient(135deg, rgba(37, 211, 102, 0.15), rgba(6, 21, 37, 0.9));
+      }
+      .visual-tag {
+        position: absolute;
+        top: 8px;
+        font-size: 8px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        padding: 2px 6px;
+        border-radius: 2px;
+      }
+      .visual-tag-before { background: rgba(255, 77, 77, 0.2); color: #ff4d4d; left: 8px; }
+      .visual-tag-after { background: rgba(37, 211, 102, 0.2); color: #25d366; right: 8px; }
+      
+      /* Aqua and Safety Icon Styles */
+
+      /* TDS meter drawing */
+      .tds-meter {
+        width: 60px;
+        height: 35px;
+        border-radius: 4px;
+        background: #111;
+        border: 1px solid rgba(255,255,255,0.15);
+        color: #ff4d4d;
+        font-family: monospace;
+        font-size: 14px;
+        font-weight: bold;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: inset 0 0 10px rgba(255,77,77,0.3);
+      }
+      .tds-meter.clean {
+        color: #25d366;
+        box-shadow: inset 0 0 10px rgba(37,211,102,0.3);
+      }
+
+      /* Aquifer Sourcing Drawing */
+      .aquifer-graphic {
+        font-size: 2.2rem;
+        filter: drop-shadow(0 4px 10px rgba(255,77,77,0.3));
+      }
+      .aquifer-graphic.clean {
+        filter: drop-shadow(0 4px 10px rgba(37,211,102,0.3));
+      }
+
+      /* Microbial safety icon */
+      .safety-icon {
+        font-size: 2.2rem;
+        filter: drop-shadow(0 4px 10px rgba(255,77,77,0.3));
+      }
+      .safety-icon.clean {
+        filter: drop-shadow(0 4px 10px rgba(37,211,102,0.3));
+      }
+
+      @media(max-width: 900px) {
+        .results-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+      }
+    </style>
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <p class="sec-label reveal d1" style="justify-content:center">Proof of Excellence</p>
+      <h2 class="sec-title lt reveal d2">Before / After <em style="color:var(--teal-accent)">Water Verification</em></h2>
+      <p class="reveal d3" style="color:rgba(255,255,255,.65);max-width:600px;margin:0 auto;font-size:14px;line-height:1.8">
+        Lab-certified purity standards showing the transition from raw underground source water to premium bottled QUERA water.
+      </p>
+    </div>
+
+    <div class="results-grid reveal d2">
+      <!-- Card 1: TDS Metrics -->
+      <div class="result-card">
+        <div class="result-header">Lab TDS Sourcing Analysis</div>
+        <div class="result-body">
+          <div class="result-visual-box">
+            <div class="visual-split">
+              <div class="visual-half visual-half-before">
+                <span class="visual-tag visual-tag-before">Raw Source</span>
+                <div class="tds-meter">920</div>
+              </div>
+              <div class="visual-half visual-half-after">
+                <span class="visual-tag visual-tag-after">QUERA Bottle</span>
+                <div class="tds-meter clean">120</div>
+              </div>
+            </div>
+          </div>
+          <h4 style="color:white; font-size:15px; font-weight:600; margin-bottom:12px;">Total Dissolved Solids (TDS)</h4>
+          <p style="color:rgba(255,255,255,0.6); font-size:12px; line-height:1.6; margin-bottom:16px;">
+            Reduces heavy concentrations of raw minerals to a perfectly balanced, refreshing, and BIS-compliant 120 ppm drinking level.
+          </p>
+          <div class="comparison-container">
+            <div class="panel-before">
+              <span class="panel-title">Raw Sourced</span>
+              <span class="panel-value">920</span>
+              <span class="panel-sub">ppm (Heavy)</span>
+            </div>
+            <div class="comparison-arrow">➔</div>
+            <div class="panel-after">
+              <span class="panel-title">QUERA Bottle</span>
+              <span class="panel-value">120</span>
+              <span class="panel-sub">ppm (Ideal)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Purity & Safety -->
+      <div class="result-card">
+        <div class="result-header">Microbial &amp; Safety Audit</div>
+        <div class="result-body">
+          <div class="result-visual-box">
+            <div class="visual-split">
+              <div class="visual-half visual-half-before">
+                <span class="visual-tag visual-tag-before">Raw Sourced</span>
+                <span class="safety-icon">🦠</span>
+              </div>
+              <div class="visual-half visual-half-after">
+                <span class="visual-tag visual-tag-after">Sterile Bottle</span>
+                <span class="safety-icon clean" style="color: var(--teal-accent);">🛡️</span>
+              </div>
+            </div>
+          </div>
+          <h4 style="color:white; font-size:15px; font-weight:600; margin-bottom:12px;">Microbiological Safety</h4>
+          <p style="color:rgba(255,255,255,0.6); font-size:12px; line-height:1.6; margin-bottom:16px;">
+            Eliminates all biological hazards and bacteria through high-intensity UV and Ozone sterilization, ensuring 100% sterile seals.
+          </p>
+          <div class="comparison-container">
+            <div class="panel-before">
+              <span class="panel-title">Raw Sourced</span>
+              <span class="panel-value" style="font-size:1.8rem; text-transform:uppercase; color: #ff4d4d;">Risky</span>
+              <span class="panel-sub">Untreated water</span>
+            </div>
+            <div class="comparison-arrow">➔</div>
+            <div class="panel-after">
+              <span class="panel-title">QUERA Bottle</span>
+              <span class="panel-value" style="font-size:1.8rem; text-transform:uppercase; color: #25d366;">100% Safe</span>
+              <span class="panel-sub">FSSAI Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3: Taste & Mineral Balance -->
+      <div class="result-card">
+        <div class="result-header">Taste &amp; Mineral Sensation</div>
+        <div class="result-body">
+          <div class="result-visual-box">
+            <div class="visual-split">
+              <div class="visual-half visual-half-before">
+                <span class="visual-tag visual-tag-before">Raw Sourced</span>
+                <span class="aquifer-graphic">🧂</span>
+              </div>
+              <div class="visual-half visual-half-after">
+                <span class="visual-tag visual-tag-after">QUERA Bottle</span>
+                <span class="aquifer-graphic clean" style="color: var(--teal-accent);">💧</span>
+              </div>
+            </div>
+          </div>
+          <h4 style="color:white; font-size:15px; font-weight:600; margin-bottom:12px;">Taste Quality Upgrade</h4>
+          <p style="color:rgba(255,255,255,0.6); font-size:12px; line-height:1.6; margin-bottom:16px;">
+            Converts heavy and salty-tasting underground source water into sweet, crisp, and thirst-quenching premium drinking water.
+          </p>
+          <div class="comparison-container">
+            <div class="panel-before">
+              <span class="panel-title">Raw Sourced</span>
+              <span class="panel-value" style="font-size:1.8rem; text-transform:uppercase; color: #ff4d4d;">Salty</span>
+              <span class="panel-sub">Raw alkaline</span>
+            </div>
+            <div class="comparison-arrow">➔</div>
+            <div class="panel-after">
+              <span class="panel-title">QUERA Bottle</span>
+              <span class="panel-value" style="font-size:1.8rem; text-transform:uppercase; color: #25d366;">Sweet</span>
+              <span class="panel-sub">Mineral Balanced</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- HOSPITALITY -->
-  <section id="hospitality" class="sl">
+  <section id="hospitality" class="sg" style="background: linear-gradient(180deg, #05162e 0%, #020a16 100%); border-top: 1px solid rgba(0, 210, 255, 0.1); border-bottom: 1px solid rgba(0, 210, 255, 0.1);">
     <div class="hosp-intro reveal d1">
-      <p class="sec-label dt" style="justify-content:center">Hospitality Solutions</p>
-      <h2 class="sec-title dt">Elevate Your <em style="color:var(--mountain-teal)">Guest Experience</em></h2>
-      <p>QUERA WATER is the trusted hydration partner for premium hospitality brands. From boutique hotels to luxury resorts, we deliver consistent quality that your guests will remember.</p>
+      <p class="sec-label" style="justify-content:center; color: var(--gold-accent);">Hospitality Solutions</p>
+      <h2 class="sec-title lt" style="color: white;">Elevate Your <em style="color:var(--gold-accent)">Guest Experience</em></h2>
+      <p style="color: rgba(255, 255, 255, 0.75);">QUERA WATER is the trusted hydration partner for premium hospitality brands. From boutique hotels to luxury resorts, we deliver consistent quality that your guests will remember.</p>
     </div>
     <div class="hosp-cards">
       <div class="hosp-card reveal d1"><span class="hosp-icon">🏨</span><div class="hosp-title">Hotels & Resorts</div><p class="hosp-desc">Branded water bottles for in-room service, restaurants, and conference facilities that elevate your property's image.</p></div>
@@ -926,6 +1802,174 @@
       <div class="hosp-card reveal d3"><span class="hosp-icon">✈️</span><div class="hosp-title">Airlines & Lounges</div><p class="hosp-desc">Compact 200ml bottles ideal for in-flight service and airport lounges where space and quality both matter.</p></div>
       <div class="hosp-card reveal d4"><span class="hosp-icon">🏢</span><div class="hosp-title">Corporate Offices</div><p class="hosp-desc">Keep your workforce hydrated with premium branded water that reflects your corporate identity.</p></div>
       <div class="hosp-card reveal d5"><span class="hosp-icon">🎊</span><div class="hosp-title">Events & Banquets</div><p class="hosp-desc">Custom branded water for weddings, conferences, and corporate events — a thoughtful branded touch.</p></div>
+    </div>
+  </section>
+
+  <!-- PREMIUM PARTNERS -->
+  <section id="partners" class="sg" style="background: rgba(6, 18, 34, 0.95); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06); padding: 80px 5%;">
+    <style>
+      .partners-grid {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+      .partner-card {
+        background: rgba(10, 36, 70, 0.3);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 8px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 140px;
+        backdrop-filter: blur(15px);
+        position: relative;
+        overflow: hidden;
+      }
+      .partner-card::before {
+        content: '';
+        position: absolute;
+        top: 0; left: 0; right: 0; bottom: 0;
+        border-radius: 8px;
+        background: radial-gradient(circle at center, rgba(201, 168, 76, 0.12) 0%, transparent 70%);
+        opacity: 0;
+        transition: opacity 0.4s ease;
+        z-index: 1;
+      }
+      .partner-card:hover::before {
+        opacity: 1;
+      }
+      .partner-card:hover {
+        transform: translateY(-5px);
+        border-color: var(--gold-accent);
+        background: rgba(10, 36, 70, 0.55);
+        box-shadow: 0 10px 25px rgba(201, 168, 76, 0.2);
+      }
+      .partner-icon {
+        font-size: 28px;
+        margin-bottom: 14px;
+        z-index: 2;
+        transition: all 0.3s ease;
+      }
+      .partner-card:hover .partner-icon {
+        transform: scale(1.15) rotate(5deg);
+      }
+      .partner-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.25rem;
+        color: white;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 6px;
+        z-index: 2;
+        letter-spacing: 0.5px;
+      }
+      .partner-sub {
+        font-size: 9px;
+        font-weight: 700;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        color: var(--gold-accent);
+        z-index: 2;
+      }
+      @media(max-width: 992px) {
+        .partners-grid {
+          grid-template-columns: repeat(3, 1fr);
+          gap: 16px;
+        }
+      }
+      @media(max-width: 600px) {
+        .partners-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 12px;
+        }
+        .partner-card {
+          padding: 20px 10px;
+          min-height: 110px;
+        }
+        .partner-name {
+          font-size: 1.05rem;
+        }
+      }
+    </style>
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <p class="sec-label reveal d1" style="justify-content:center; color: var(--gold-accent);">A Legacy Built On Purity</p>
+      <h2 class="sec-title lt reveal d2" style="color: white; margin-bottom: 12px;">Our Premium <em style="color:var(--gold-accent)">Partners &amp; Customers</em></h2>
+      <p class="reveal d3" style="color:rgba(255,255,255,.65);max-width:700px;margin:0 auto 50px;font-size:14px;line-height:1.8">
+        QUERA WATER is trusted by top-tier luxury hotels, banquets, and corporate locations to provide unparalleled hydration standards.
+      </p>
+    </div>
+
+    <div class="partners-grid reveal d2">
+      <!-- Partner 1 -->
+      <div class="partner-card">
+        <span class="partner-icon">🌺</span>
+        <h3 class="partner-name">HIBISCUS</h3>
+        <span class="partner-sub">Hotels &amp; Resorts</span>
+      </div>
+
+      <!-- Partner 2 -->
+      <div class="partner-card">
+        <span class="partner-icon">🏨</span>
+        <h3 class="partner-name">TREBOO</h3>
+        <span class="partner-sub">Hotels</span>
+      </div>
+
+      <!-- Partner 3 -->
+      <div class="partner-card">
+        <span class="partner-icon">🏡</span>
+        <h3 class="partner-name">FM GARDER</h3>
+        <span class="partner-sub">Premium Customer</span>
+      </div>
+
+      <!-- Partner 4 -->
+      <div class="partner-card">
+        <span class="partner-icon">🍁</span>
+        <h3 class="partner-name">MAPLE GARDEN</h3>
+        <span class="partner-sub">Banquets &amp; Events</span>
+      </div>
+
+      <!-- Partner 5 -->
+      <div class="partner-card">
+        <span class="partner-icon">👑</span>
+        <h3 class="partner-name">RAMA GRAND</h3>
+        <span class="partner-sub">Luxury Hotel</span>
+      </div>
+
+      <!-- Partner 6 -->
+      <div class="partner-card">
+        <span class="partner-icon">✨</span>
+        <h3 class="partner-name">RAMA CEREMONY</h3>
+        <span class="partner-sub">Banquet &amp; Events</span>
+      </div>
+
+      <!-- Partner 7 -->
+      <div class="partner-card">
+        <span class="partner-icon">🦁</span>
+        <h3 class="partner-name">THE PRIDE HOTEL</h3>
+        <span class="partner-sub">Luxury Stay</span>
+      </div>
+
+      <!-- Partner 8 -->
+      <div class="partner-card">
+        <span class="partner-icon">🛍️</span>
+        <h3 class="partner-name">GAUR CITY</h3>
+        <span class="partner-sub">Big Outlets</span>
+      </div>
+
+      <!-- Partner 9 -->
+      <div class="partner-card">
+        <span class="partner-icon">💎</span>
+        <h3 class="partner-name">BLUE SAPPHIRE</h3>
+        <span class="partner-sub">Mall Outlets</span>
+      </div>
+
+
     </div>
   </section>
 
@@ -1002,7 +2046,7 @@
     <div style="max-width: 1200px; margin: 0 auto;">
       
       <!-- Grid layout -->
-      <div class="customization-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 60px; align-items: start;">
+      <div style="max-width: 800px; margin: 0 auto;">
         
         <!-- Left: Solutions & Services -->
         <div class="reveal d1">
@@ -1015,28 +2059,31 @@
             Every bottle is designed with professional support according to your brand theme, market demand, and packaging requirements. Our expert team helps customers select the best bottle style, sticker quality, colors, and finishing after understanding their brand vision and product demand. QUERA focuses on delivering premium quality products with attractive and professional packaging solutions specially created for our customers.
           </p>
           
-          <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-accent); margin-bottom: 16px;">Our Services Include:</h4>
+          <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-accent); margin-bottom: 16px;">Customization Branding For:</h4>
           <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 14px;">
             <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Glass Bottle Customization
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Hotels &amp; Resorts
             </div>
             <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> PET & Premium PET Designing
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Restaurants &amp; Cafés
             </div>
             <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Sticker & Label Selection
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Corporate Offices
             </div>
             <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Brand Packaging Support
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Wedding &amp; Social Events
             </div>
             <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Printing & Designer Finishing
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Conferences &amp; Exhibitions
             </div>
             <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Bulk Order Assistance
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Educational Institutions
             </div>
-            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600; grid-column: span 2;">
-              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Professional Design Consultation
+            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Retail Chains
+            </div>
+            <div style="display: flex; align-items: center; gap: 10px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+              <span style="color:var(--teal-accent); font-size: 14px;">✦</span> Hospitals &amp; Healthcare Facilities
             </div>
           </div>
           
@@ -1045,123 +2092,51 @@
           </p>
         </div>
         
-        <!-- Right: Terms & Conditions -->
-        <div class="reveal d3" style="background: rgba(10, 36, 70, 0.4); border: 1px solid rgba(43, 188, 212, 0.2); border-radius: 6px; padding: 36px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);">
-          <h3 style="font-family:'Cormorant Garamond',serif; font-size: 1.8rem; color: white; font-weight: 400; margin-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; letter-spacing: 0.5px; text-transform: uppercase;">Terms &amp; Conditions</h3>
-          
-          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; padding: 0; margin: 0;">
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span>Pricing depends on the quality, color, and design of stickers.</span>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span>Sticker size and bottle size may affect the final pricing.</span>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span>Order quantity is the most important factor for pricing and production.</span>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span>Minimum order quantity may apply on customized products.</span>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <strong style="color: #00ff66;">50% advance payment is required before order confirmation.</strong>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span>Remaining 50% payment must be completed on or before the delivery/order date.</span>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span>Production time depends on customization type and order quantity.</span>
-            </li>
-            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
-              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
-              <span style="color: #ff4d4d; font-weight: 600;">Customized orders cannot be cancelled after production starts.</span>
-            </li>
-          </ul>
-          
-          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); text-align: right; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45);">
-            * Terms &amp; Conditions Apply.
-          </div>
-        </div>
-
       </div>
     </div>
-  </section>
-
-  <!-- HOW TO ORDER -->
-  <section id="order" class="sl">
-    <div style="max-width:900px;margin:0 auto;text-align:center">
-      <p class="sec-label dt reveal d1" style="justify-content:center">Simple Process</p>
-      <h2 class="sec-title dt reveal d2">How to <em style="color:var(--mountain-teal)">Order</em></h2>
-      <p class="reveal d3" style="color:rgba(13,31,45,.65);max-width:500px;margin:0 auto;font-size:14px;line-height:1.8">Getting started with QUERA WATER is simple. Three easy steps to premium hydration for your business.</p>
-    </div>
-    <div class="how-steps">
-      <div class="how-step reveal d1">
-        <div class="how-num">1</div>
-        <div class="how-title">Get in Touch</div>
-        <p class="how-desc">Contact us via WhatsApp, phone, or our enquiry form. Share your requirements — quantity, bottle size, and branding needs.</p>
-      </div>
-      <div class="how-step reveal d2">
-        <div class="how-num">2</div>
-        <div class="how-title">Customise & Confirm</div>
-        <p class="how-desc">Our team helps design your custom label and provides a detailed quote. Once confirmed, we begin production.</p>
-      </div>
-      <div class="how-step reveal d3">
-        <div class="how-num">3</div>
-        <div class="how-title">Delivered to You</div>
-        <p class="how-desc">Your order is packaged with care and delivered directly to your location, ready for immediate use.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- SHOP SECTION -->
-  <section id="shop" class="sg" style="background: rgba(6, 18, 34, 0.9);">
+  </section>  <!-- SHOP SECTION -->
+  <section id="shop" class="sg" style="background: rgba(6, 18, 34, 0.9); display: none !important;">
     <div style="max-width:1200px;margin:0 auto;text-align:center">
       <p class="sec-label reveal d1" style="justify-content:center">ORDER ONLINE</p>
       <h2 class="sec-title lt reveal d2" style="font-family:'Cormorant Garamond',serif; font-style: italic;">Shop Our Products</h2>
       <p class="reveal d3" style="color:rgba(255,255,255,.65);max-width:560px;margin:0 auto;font-size:14px;line-height:1.8">Same-day dispatch for orders before 2 PM. Fast doorstep delivery.</p>
     </div>
 
-    <div class="shop-grid reveal d2">
-      <!-- 1L Card -->
-      <div class="shop-card">
-        <div class="shop-img-wrap">
-          <img src="bottle-1l.png" alt="Quera Water 1L Box">
-        </div>
-        <span class="shop-brand">QUERA WATER</span>
-        <h3 class="shop-title">1L</h3>
-        <p class="shop-desc">Ideal for luxury dining tables, executive offices, and premium events.</p>
-        <div class="shop-price">Rs. 200 <small>/ carton</small></div>
-        <a href="order.html" target="_blank" class="shop-btn">ORDER NOW</a>
-      </div>
-
-      <!-- 500ml Card -->
-      <div class="shop-card">
-        <div class="shop-img-wrap">
-          <img src="bottle-750ml.png" alt="Quera Water 500ml Box">
-        </div>
-        <span class="shop-brand">QUERA WATER</span>
-        <h3 class="shop-title">500ml</h3>
-        <p class="shop-desc">Our most popular size. Ideal for offices, gyms, cafes, and personal hydration.</p>
-        <div class="shop-price">Rs. 240 <small>/ carton</small></div>
-        <a href="order.html" target="_blank" class="shop-btn">ORDER NOW</a>
-      </div>
-
+    <div class="shop-grid reveal d2 perspective-container">
       <!-- 200ml Card -->
-      <div class="shop-card">
-        <div class="shop-img-wrap">
+      <div class="shop-card perspective-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px;">
+        <div class="shop-img-wrap" style="transform: translateZ(30px); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));">
           <img src="bottle-200ml.png" alt="Quera Water 200ml Box">
         </div>
         <span class="shop-brand">QUERA WATER</span>
-        <h3 class="shop-title">200ml</h3>
-        <p class="shop-desc">Compact size. Perfect for weddings, events, counters, and travel.</p>
-        <div class="shop-price">Rs. 180 <small>/ carton</small></div>
-        <a href="order.html" target="_blank" class="shop-btn">ORDER NOW</a>
+        <h3 class="shop-title" style="transform: translateZ(15px);">200ml</h3>
+        <p class="shop-desc" style="transform: translateZ(10px); color: var(--sec-text);">Compact size. Perfect for weddings, events, counters, and travel.</p>
+        <div class="shop-price" style="transform: translateZ(20px); color: var(--teal-accent);">Rs. 180 <small style="color: var(--sec-text);">/ carton</small></div>
+        <a href="order.html" target="_blank" class="shop-btn" style="transform: translateZ(25px); background: linear-gradient(135deg, var(--mountain-teal), var(--teal-accent)); border: none;">ORDER NOW</a>
+      </div>
+
+      <!-- 500ml Card -->
+      <div class="shop-card perspective-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px;">
+        <div class="shop-img-wrap" style="transform: translateZ(30px); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));">
+          <img src="bottle-750ml.png" alt="Quera Water 500ml Box">
+        </div>
+        <span class="shop-brand">QUERA WATER</span>
+        <h3 class="shop-title" style="transform: translateZ(15px);">500ml</h3>
+        <p class="shop-desc" style="transform: translateZ(10px); color: var(--sec-text);">Our most popular size. Ideal for offices, gyms, cafes, and personal hydration.</p>
+        <div class="shop-price" style="transform: translateZ(20px); color: var(--teal-accent);">Rs. 200 <small style="color: var(--sec-text);">/ carton</small></div>
+        <a href="order.html" target="_blank" class="shop-btn" style="transform: translateZ(25px); background: linear-gradient(135deg, var(--mountain-teal), var(--teal-accent)); border: none;">ORDER NOW</a>
+      </div>
+
+      <!-- 1L Card -->
+      <div class="shop-card perspective-card" style="background: var(--card-bg); border: 1px solid var(--card-border); border-radius: 8px;">
+        <div class="shop-img-wrap" style="transform: translateZ(30px); filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));">
+          <img src="bottle-1l.png" alt="Quera Water 1L Box">
+        </div>
+        <span class="shop-brand">QUERA WATER</span>
+        <h3 class="shop-title" style="transform: translateZ(15px);">1L</h3>
+        <p class="shop-desc" style="transform: translateZ(10px); color: var(--sec-text);">Ideal for luxury dining tables, executive offices, and premium events.</p>
+        <div class="shop-price" style="transform: translateZ(20px); color: var(--teal-accent);">Rs. 200 <small style="color: var(--sec-text);">/ carton</small></div>
+        <a href="order.html" target="_blank" class="shop-btn" style="transform: translateZ(25px); background: linear-gradient(135deg, var(--mountain-teal), var(--teal-accent)); border: none;">ORDER NOW</a>
       </div>
     </div>
 
@@ -1195,16 +2170,33 @@
         <tr><td>Payment</td><td>Net 7–30 days for registered businesses</td></tr>
       </table>
     </div>
-    <div class="cust-box reveal d3">
-      <h4>Custom Label Package Includes</h4>
-      <ul>
-        <li>Premium full-colour BOPP label printing</li>
-        <li>Your logo, brand name, and tagline</li>
-        <li>FSSAI licence number and nutritional info on reverse</li>
-        <li>Available in 200ml, 500ml and 1L formats</li>
-        <li>Complimentary label design guidance</li>
-        <li>Fast turnaround — typically 5–7 business days</li>
-      </ul>
+    <div class="reveal d3" style="display: flex; flex-wrap: wrap; gap: 24px; max-width: 860px; margin: 32px auto 0; justify-content: center;">
+      <div class="cust-box" style="margin: 0; flex: 1 1 380px; max-width: 100%;">
+        <h4>Custom Label Package Includes</h4>
+        <ul>
+          <li>Premium full-colour BOPP label printing</li>
+          <li>Your logo, brand name, and tagline</li>
+          <li>FSSAI licence number and nutritional info on reverse</li>
+          <li>Available in 200ml, 500ml and 1L formats</li>
+          <li>Complimentary label design guidance</li>
+          <li>Fast turnaround — typically 5–7 business days</li>
+        </ul>
+      </div>
+      <div class="cust-box" style="margin: 0; flex: 1 1 380px; max-width: 100%; background: rgba(255,183,3,.06); border-color: rgba(255,183,3,.3);">
+        <style>
+          .commitment-list li::before { color: var(--gold-accent) !important; }
+        </style>
+        <h4 style="color: var(--gold-accent);">Our Commitment</h4>
+        <ul class="commitment-list">
+          <li>Premium Quality</li>
+          <li>Hygienic Packaging</li>
+          <li>Reliable Supply Chain</li>
+          <li>Timely Delivery</li>
+          <li>Professional Branding Solutions</li>
+          <li>Customer Satisfaction</li>
+          <li>Sustainable Business Practices</li>
+        </ul>
+      </div>
     </div>
     <div class="fssai-strip reveal d4">
       <span class="cert-badge">✅ FSSAI Certified</span>
@@ -1214,6 +2206,165 @@
       <span class="cert-badge">GST: 09EKPPP8755L1ZX</span>
       <div class="divider"></div>
       <span style="font-size:12px;color:rgba(255,255,255,.5)">Quality Assured</span>
+    </div>
+  </section>
+
+  <!-- CUSTOMER TESTIMONIALS SECTION -->
+  <section id="testimonials" class="sl" style="background: var(--dark-navy); border-top: 1px solid var(--card-border); border-bottom: 1px solid var(--card-border); transition: all 0.4s ease;">
+    <style>
+      .testimonials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 28px;
+        max-width: 1200px;
+        margin: 50px auto 0;
+      }
+      .testimonial-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 6px;
+        padding: 36px 30px;
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        transition: all 0.4s ease;
+      }
+      .testimonial-card:hover {
+        transform: translateY(-6px);
+        border-color: var(--teal-accent);
+        box-shadow: 0 20px 45px rgba(0, 212, 255, 0.25);
+      }
+      .review-stars {
+        color: var(--gold-accent);
+        font-size: 14px;
+        margin-bottom: 16px;
+        letter-spacing: 2px;
+        transition: color 0.4s ease;
+      }
+      .review-text {
+        font-size: 13.5px;
+        line-height: 1.8;
+        color: var(--text-dark);
+        margin-bottom: 24px;
+        font-style: italic;
+        transition: color 0.4s ease;
+      }
+      .review-highlight {
+        background: rgba(0, 212, 255, 0.08);
+        border-left: 2px solid var(--teal-accent);
+        padding: 8px 12px;
+        font-size: 11px;
+        font-weight: 600;
+        color: var(--teal-accent);
+        margin-bottom: 20px;
+        border-radius: 0 4px 4px 0;
+        transition: color 0.4s ease;
+      }
+      .reviewer-info {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        border-top: 1px solid rgba(255,255,255,0.08);
+        padding-top: 16px;
+      }
+      .reviewer-avatar {
+        width: 48px;
+        height: 48px;
+        border-radius: 50%;
+        background: linear-gradient(135deg, var(--teal-accent), var(--mountain-teal));
+        color: white;
+        font-weight: 700;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 10px rgba(0, 212, 255, 0.3);
+        flex-shrink: 0;
+      }
+      .reviewer-details strong {
+        color: var(--text-dark);
+        font-size: 13.5px;
+        display: block;
+        letter-spacing: 0.5px;
+        transition: color 0.4s ease;
+      }
+      .reviewer-details span {
+        color: var(--teal-accent);
+        font-size: 11px;
+        display: block;
+        margin-top: 2px;
+        transition: color 0.4s ease;
+      }
+      @media(max-width: 900px) {
+        .testimonials-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+        }
+      }
+    </style>
+    <div style="max-width:900px;margin:0 auto;text-align:center">
+      <p class="sec-label reveal d1" style="justify-content:center">Success Stories</p>
+      <h2 class="sec-title lt reveal d2">Customer <em style="color:var(--teal-accent)">Reviews</em></h2>
+      <p class="reveal d3" style="color:var(--sec-text);max-width:550px;margin:0 auto;font-size:14px;line-height:1.8">
+        See how top hotels, banquets, and corporate offices in Noida &amp; Delhi NCR elevate their guest hydration experience with QUERA.
+      </p>
+    </div>
+
+    <div class="testimonials-grid reveal d2" id="testimonialsGrid">
+      <!-- Testimonial 1 -->
+      <div class="testimonial-card">
+        <div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Best bottled water quality and prompt delivery service. We switched to QUERA custom-labeled bottles for our guest rooms, and the feedback has been phenomenal. The glass packaging looks incredibly premium and the water is perfectly sweet and refreshing."</p>
+          <div class="review-highlight">Custom Labeling: 500ml Premium Bottles</div>
+        </div>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar">RP</div>
+          <div class="reviewer-details">
+            <strong>Rajesh Prasad</strong>
+            <span>Operations Manager, Treboo Hotels</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 2 -->
+      <div class="testimonial-card">
+        <div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Very clean and premium packaging. We order QUERA 200ml and 500ml water cases in bulk for weddings and corporate events. The delivery is always on time, and the quality of the bottles is top-notch. Our corporate clients love it!"</p>
+          <div class="review-highlight">Bulk Delivery: 200ml &amp; 500ml cases</div>
+        </div>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar" style="background: linear-gradient(135deg, var(--gold-accent), #c9a84c)">SR</div>
+          <div class="reviewer-details">
+            <strong>Sunita Reddy</strong>
+            <span>Event Planner, Maple Garden, Noida</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Testimonial 3 -->
+      <div class="testimonial-card">
+        <div>
+          <div class="review-stars">★★★★★</div>
+          <p class="review-text">"Excellent water purity and service. We've been subscribing to QUERA's packaged drinking water solutions for our corporate offices. The taste is consistently light and crisp, and their supply chain team is exceptionally reliable."</p>
+          <div class="review-highlight">Office Hydration: 1L Premium PET cases</div>
+        </div>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar" style="background: linear-gradient(135deg, #a8d8ea, #1a6b7a)">AK</div>
+          <div class="reviewer-details">
+            <strong>Amit Kumar</strong>
+            <span>Admin Lead, Gaur City Outlets</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;" class="reveal d3">
+      <button class="btn-primary" onclick="openReviewModal()" style="display: inline-flex; align-items: center; gap: 8px; padding: 12px 30px; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; border-radius: 4px; box-shadow: 0 4px 15px rgba(0, 212, 255, 0.2); text-transform: uppercase; border: none; cursor: pointer; color: white;">
+        ✍️ Write a Review
+      </button>
     </div>
   </section>
 
@@ -1234,7 +2385,6 @@
         <div class="video-wrapper">
           <video controls poster="gallery-purple.jpg" id="galleryVideo">
             <source src="video.mp4" type="video/mp4">
-            <source src="video.webm" type="video/webm">
             Your browser does not support the video tag.
           </video>
         </div>
@@ -1245,6 +2395,51 @@
 
       <!-- Photos Subgrid -->
       <div class="photos-subgrid">
+        <!-- Item: Quera Tube Packaging -->
+        <div class="gallery-item" onclick="openLightbox('gallery-tube.jpg')">
+          <img src="gallery-tube.jpg" alt="Quera Luxury Tube Packaging Campaign">
+          <div class="gallery-item-overlay">
+            <span class="gallery-tag">Premium Packaging</span>
+            <h4 class="gallery-title">Luxury Tube Collection</h4>
+          </div>
+        </div>
+
+        <!-- Item: Quera Sleek Can -->
+        <div class="gallery-item" onclick="openLightbox('gallery-can.jpg')">
+          <img src="gallery-can.jpg" alt="Quera Sleek Aluminum Can Campaign">
+          <div class="gallery-item-overlay">
+            <span class="gallery-tag">Can Edition</span>
+            <h4 class="gallery-title">Sleek Aluminum Can</h4>
+          </div>
+        </div>
+
+        <!-- Item: Hibiscus Custom Label Poster -->
+        <div class="gallery-item" onclick="openLightbox('gallery-poster-1.jpg')">
+          <img src="gallery-poster-1.jpg" alt="Quera HIBISCUS Custom Branded Bottle Campaign">
+          <div class="gallery-item-overlay">
+            <span class="gallery-tag">Hotel Customisation</span>
+            <h4 class="gallery-title">Hibiscus Luxury Suites</h4>
+          </div>
+        </div>
+
+        <!-- Item: Emerald Velvet Custom Label Poster -->
+        <div class="gallery-item" onclick="openLightbox('gallery-poster-2.jpg')">
+          <img src="gallery-poster-2.jpg" alt="Quera Emerald Velvet Bag Campaign">
+          <div class="gallery-item-overlay">
+            <span class="gallery-tag">Velvet Series</span>
+            <h4 class="gallery-title">Emerald Luxury Edition</h4>
+          </div>
+        </div>
+
+
+        <!-- Item: Jubilee Banquet Custom Label Poster -->
+        <div class="gallery-item" onclick="openLightbox('gallery-poster-4.jpg')">
+          <img src="gallery-poster-4.jpg" alt="Quera Jubilee Convention Custom Branded Bottle Campaign">
+          <div class="gallery-item-overlay">
+            <span class="gallery-tag">Banquet Customisation</span>
+            <h4 class="gallery-title">Jubilee Convention &amp; Banquet</h4>
+          </div>
+        </div>
         <!-- Item 1: Purple 1L Box -->
         <div class="gallery-item" onclick="openLightbox('gallery-purple.jpg')">
           <img src="gallery-purple.jpg" alt="Quera Pure Hydration 1L Campaign">
@@ -1317,14 +2512,7 @@
           </div>
         </div>
 
-        <!-- Item 9: Sandel Lounge -->
-        <div class="gallery-item" onclick="openLightbox('gallery-sandel.jpg')">
-          <img src="gallery-sandel.jpg" alt="Quera Sandel Suites Custom Bottle">
-          <div class="gallery-item-overlay">
-            <span class="gallery-tag">Custom Label</span>
-            <h4 class="gallery-title">Sandel Suites operated by Lemon Tree</h4>
-          </div>
-        </div>
+
       </div>
     </div>
   </section>
@@ -1336,6 +2524,300 @@
       <img src="" id="lightboxImage" alt="Lightbox Zoomed View">
     </div>
   </div>
+
+  <!-- WRITE A REVIEW MODAL -->
+  <div class="lightbox" id="reviewLightbox" style="display: none;">
+    <div style="background: rgba(10, 36, 70, 0.95); border: 1px solid rgba(43, 188, 212, 0.25); border-radius: 8px; padding: 36px 30px; width: 90%; max-width: 500px; box-shadow: 0 20px 50px rgba(0,0,0,0.6); position: relative; animation: zoomIn 0.3s cubic-bezier(0.165, 0.84, 0.44, 1); backdrop-filter: blur(25px);">
+      <button class="lightbox-close" onclick="closeReviewModal()" style="top: 15px; right: 20px; font-size: 24px; position: absolute; background: none; border: none; color: white; cursor: pointer; opacity: 0.7; transition: opacity 0.3s;">✕</button>
+      
+      <h3 style="font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: white; font-weight: 700; margin-bottom: 8px; text-align: center;">Share Your Experience</h3>
+      <p style="color: rgba(255, 255, 255, 0.6); font-size: 13px; text-align: center; margin-bottom: 24px;">Your feedback helps us maintain our premium hydration standards!</p>
+      
+      <form id="writeReviewForm" onsubmit="handleReviewSubmit(event)" style="display: flex; flex-direction: column; gap: 16px;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-accent);">Full Name</label>
+          <input type="text" id="rev-name" placeholder="e.g. Ramesh Singh" required style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 10px 14px; color: white; font-family: 'Montserrat', sans-serif; font-size: 13px; outline: none; transition: all 0.3s;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-accent);">Role / Company</label>
+          <input type="text" id="rev-role" placeholder="e.g. F&B Manager, Radisson Noida" required style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 10px 14px; color: white; font-family: 'Montserrat', sans-serif; font-size: 13px; outline: none; transition: all 0.3s;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-accent);">Rating</label>
+          <div style="display: flex; gap: 10px; font-size: 24px; color: rgba(255, 255, 255, 0.2); cursor: pointer;" id="starRating">
+            <span onclick="setRating(1)" class="star">★</span>
+            <span onclick="setRating(2)" class="star">★</span>
+            <span onclick="setRating(3)" class="star">★</span>
+            <span onclick="setRating(4)" class="star">★</span>
+            <span onclick="setRating(5)" class="star">★</span>
+          </div>
+          <input type="hidden" id="rev-rating" value="5">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-accent);">Highlight (Optional)</label>
+          <input type="text" id="rev-highlight" placeholder="e.g. Custom Labeling, Fast Delivery" style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 10px 14px; color: white; font-family: 'Montserrat', sans-serif; font-size: 13px; outline: none; transition: all 0.3s;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label style="font-size: 9px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--teal-accent);">Review Message</label>
+          <textarea id="rev-message" placeholder="Write your feedback here..." required style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 4px; padding: 10px 14px; color: white; font-family: 'Montserrat', sans-serif; font-size: 13px; outline: none; transition: all 0.3s; resize: vertical; min-height: 80px;"></textarea>
+        </div>
+        <button type="submit" class="btn-primary" style="margin-top: 10px; padding: 12px; font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; border-radius: 4px; border: none; cursor: pointer; color: white;">Submit Review</button>
+      </form>
+    </div>
+    <style>
+      #starRating .star {
+        transition: color 0.2s ease;
+      }
+      #starRating .star:hover {
+        color: var(--gold-accent) !important;
+      }
+    </style>
+  </div>
+
+  <!-- TEAM PROFILE SECTION -->
+  <section id="team" class="sg" style="background: rgba(6, 18, 34, 0.9); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+    <style>
+      .team-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 24px;
+        max-width: 1200px;
+        margin: 50px auto 0;
+      }
+      .team-card {
+        background: rgba(10, 36, 70, 0.4);
+        border: 1px solid rgba(255, 255, 255, 0.08);
+        border-radius: 6px;
+        padding: 30px 20px;
+        text-align: center;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(15px);
+      }
+      .team-card:hover {
+        transform: translateY(-8px);
+        border-color: var(--teal-accent);
+        background: rgba(10, 36, 70, 0.65);
+        box-shadow: 0 15px 30px rgba(43, 188, 212, 0.15);
+      }
+      .team-img-placeholder {
+        width: 130px;
+        height: 130px;
+        border-radius: 12px;
+        background: linear-gradient(135deg, rgba(43, 188, 212, 0.15), rgba(10, 36, 70, 0.8));
+        border: 2px solid rgba(43, 188, 212, 0.25);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin: 0 auto 20px;
+        color: var(--teal-accent);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+        transition: all 0.3s ease;
+        overflow: hidden;
+      }
+      .team-card:hover .team-img-placeholder {
+        transform: scale(1.08);
+        border-color: var(--teal-accent);
+        box-shadow: 0 8px 24px rgba(43, 188, 212, 0.4);
+      }
+      .team-name {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.6rem;
+        color: white;
+        font-weight: 700;
+        margin-bottom: 6px;
+      }
+      .team-role {
+        font-size: 10px;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--teal-accent);
+        margin-bottom: 14px;
+        display: block;
+      }
+      .team-bio {
+        font-size: 11.5px;
+        line-height: 1.7;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      @media(max-width: 992px) {
+        .team-grid {
+          grid-template-columns: repeat(2, 1fr);
+        }
+      }
+      @media(max-width: 600px) {
+        .team-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+      }
+    </style>
+    <div style="max-width:1200px;margin:0 auto;text-align:center">
+      <p class="sec-label reveal d1" style="justify-content:center">The Human Side</p>
+      <h2 class="sec-title lt reveal d2">Meet the <em style="color:var(--teal-accent)">Water Experts</em></h2>
+      <p class="reveal d3" style="color:rgba(255,255,255,.65);max-width:600px;margin:0 auto;font-size:14px;line-height:1.8">
+        Our highly trained team of engineers, installers, and customer coordinators are dedicated to solving your hard water problems.
+      </p>
+    </div>
+
+    <div class="team-grid reveal d2" style="display: flex; flex-wrap: wrap; gap: 24px; justify-content: center;">
+      <!-- Card 1: Founder -->
+      <div class="team-card" style="flex: 1 1 220px; max-width: 280px;">
+        <div class="team-img-placeholder" style="overflow: hidden; padding: 0;">
+          <img src="bunty_new.jpg" alt="Bunty Kumar" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="team-name">BUNTY KUMAR</h3>
+        <span class="team-role" style="color: var(--gold-accent);">Founder &amp; Brand Owner</span>
+        <p class="team-bio">Bunty Kumar has gained valuable hospitality experience working with renowned hotel brands such as Radisson Blu Hotel and Lemon Tree Hotels. Earlier in his career, he worked as a professional bartender, where he developed strong guest service and customer engagement skills. Building on this experience, he started working with Quera Water with a vision to enhance the guest experience by providing premium-quality drinking water and creating a refreshing, memorable, and satisfying experience for every guest.</p>
+      </div>
+
+
+      <!-- Card 3: Operations Managers -->
+      <div class="team-card" style="flex: 1 1 220px; max-width: 280px;">
+        <div class="team-img-placeholder" style="overflow: hidden; padding: 0;">
+          <img src="operations.jpg" alt="Operations Managers" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="team-name">VIKKI, SHAKTI &amp; DURVENDRA DAGAR</h3>
+        <span class="team-role">Operations Managers</span>
+        <p class="team-bio">Supervising warehouse logistics, supply chain efficiency, corporate alignment, and daily distribution operations across India.</p>
+      </div>
+
+      <!-- Card 4: Quality Control -->
+      <div class="team-card" style="flex: 1 1 220px; max-width: 280px;">
+        <div class="team-img-placeholder" style="overflow: hidden; padding: 0;">
+          <img src="avinash.jpg" alt="Avinash Kumar" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="team-name">AVINASH KUMAR</h3>
+        <span class="team-role">Quality Control &amp; Digital Operations Manager</span>
+        <p class="team-bio">Responsible for overseeing website development, updates, and digital operations while ensuring quality control standards are consistently maintained. Monitors operational efficiency, implements quality assurance procedures, coordinates with relevant teams, and contributes to the continuous improvement of products, services, and customer experience.</p>
+      </div>
+
+      <!-- Card 5: Sales & Marketing -->
+      <div class="team-card" style="flex: 1 1 220px; max-width: 280px;">
+        <div class="team-img-placeholder" style="overflow: hidden; padding: 0;">
+          <img src="debolina.jpg" alt="Debolina Dey, Suman Kumari &amp; Kriti" style="width: 100%; height: 100%; object-fit: cover;">
+        </div>
+        <h3 class="team-name">DEBOLINA DEY, SUMAN KUMARI &amp; KRITI</h3>
+        <span class="team-role">Sales &amp; Marketing Managers</span>
+        <p class="team-bio">Driving brand outreach, regional sales growth, corporate labeling partnerships, and retail business growth across all states, including Durgapur and West Bengal region.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="sg">
+    <div class="about-grid">
+      <div class="about-text reveal d1">
+        <p class="sec-label">About Us</p>
+        <h2 class="sec-title lt">Purity, Quality, <em style="color:var(--teal-accent)">Excellence</em><br>By VBR BROTHERS</h2>
+        <p style="margin-bottom: 20px;">
+          <strong>VBR BROTHERS</strong> (Value · Balance · Refreshment) presents <strong>QUERA WATER</strong>, a premium water brand dedicated to delivering purity, quality, and excellence. We provide high-quality Natural Mineral Water and Packaged Drinking Water solutions for hotels, resorts, restaurants, corporate offices, events, weddings, educational institutions, and retail businesses across India.
+        </p>
+        <p style="margin-bottom: 20px;">
+          Our products are manufactured, packaged, and distributed under stringent quality standards to ensure safety, freshness, consistency, and customer satisfaction.
+        </p>
+        
+        <h4 style="font-size: 11px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--teal-accent); margin-bottom: 16px;">Our Products Include:</h4>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 24px;">
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Natural Mineral Water
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Packaged Drinking Water
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Premium Glass Bottles
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Premium PET Bottles
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Standard PET Bottles
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Customized Hotel Bottles
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Corporate Branding Bottles
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600;">
+            <span style="color:var(--teal-accent);">✓</span> Event &amp; Wedding Bottles
+          </div>
+          <div style="display: flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.85); font-size: 12px; font-weight: 600; grid-column: span 2;">
+            <span style="color:var(--teal-accent);">✓</span> Paper-Pack Water Solutions
+          </div>
+        </div>
+      </div>
+      <div class="reveal d3">
+        <div class="bottle-showcase">
+          <div class="bottle-glow"></div>
+          
+          <!-- 200ml Bottle -->
+          <div class="bottle-img-wrap">
+            <img src="bottle-200ml.png" alt="QUERA WATER 200ml bottle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div style="display:none;width:120px;height:320px;background:linear-gradient(180deg,rgba(43,188,212,.15),rgba(10,36,70,.6));border:1px solid rgba(43,188,212,.25);border-radius:10px 10px 16px 16px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.6);font-size:11px;letter-spacing:2px;text-align:center;padding:12px">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--glacier-blue);font-weight:700">QUERA<br>WATER</span>
+              <span style="font-size:9px;color:var(--teal-accent);letter-spacing:3px">200 ML</span>
+            </div>
+            <div class="bottle-size-tag">200 ML</div>
+            <a href="order.html" class="btn-primary" style="margin-top: 14px; padding: 8px 24px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-decoration: none; border-radius: 2px; width: 100%; text-align: center; display: inline-block; box-shadow: 0 4px 15px rgba(43,188,212,.3);">🛒 Order Now</a>
+          </div>
+
+          <!-- 500ml Bottle -->
+          <div class="bottle-img-wrap">
+            <img src="bottle-750ml.png" alt="QUERA WATER 500ml bottle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div style="display:none;width:130px;height:350px;background:linear-gradient(180deg,rgba(43,188,212,.15),rgba(10,36,70,.6));border:1px solid rgba(43,188,212,.25);border-radius:11px 11px 18px 18px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.6);font-size:11px;letter-spacing:2px;text-align:center;padding:14px">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.15rem;color:var(--glacier-blue);font-weight:700">QUERA<br>WATER</span>
+              <span style="font-size:9px;color:var(--teal-accent);letter-spacing:3px">500 ML</span>
+            </div>
+            <div class="bottle-size-tag">500 ML</div>
+            <a href="order.html" class="btn-primary" style="margin-top: 14px; padding: 8px 24px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-decoration: none; border-radius: 2px; width: 100%; text-align: center; display: inline-block; box-shadow: 0 4px 15px rgba(43,188,212,.3);">🛒 Order Now</a>
+          </div>
+
+          <!-- 1L Bottle -->
+          <div class="bottle-img-wrap" style="animation-delay:-1s;">
+            <img src="bottle-1l.png" alt="QUERA WATER 1L bottle" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+            <div style="display:none;width:150px;height:400px;background:linear-gradient(180deg,rgba(43,188,212,.15),rgba(10,36,70,.6));border:1px solid rgba(43,188,212,.25);border-radius:12px 12px 20px 20px;align-items:center;justify-content:center;flex-direction:column;gap:8px;color:rgba(255,255,255,.6);font-size:11px;letter-spacing:2px;text-align:center;padding:16px">
+              <span style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--glacier-blue);font-weight:700">QUERA<br>WATER</span>
+              <span style="font-size:9px;color:var(--teal-accent);letter-spacing:3px">1 L</span>
+            </div>
+            <div class="bottle-size-tag">1 L</div>
+            <a href="order.html" class="btn-primary" style="margin-top: 14px; padding: 8px 24px; font-size: 10px; font-weight: 700; letter-spacing: 2px; text-decoration: none; border-radius: 2px; width: 100%; text-align: center; display: inline-block; box-shadow: 0 4px 15px rgba(43,188,212,.3);">🛒 Order Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+  <!-- HOW TO ORDER -->
+  <section id="order" class="sl" style="background: linear-gradient(135deg, #e3f4f8 0%, #bde1e8 100%); border-top: 1px solid rgba(0, 210, 255, 0.1); border-bottom: 1px solid rgba(0, 210, 255, 0.1); position: relative; z-index: 10; padding: 100px 5%;">
+    <div style="max-width:900px;margin:0 auto;text-align:center">
+      <p class="sec-label" style="justify-content:center; color: var(--mountain-teal);">Simple Process</p>
+      <h2 class="sec-title" style="color: #081120; text-align: center;">How to <em style="color: var(--mountain-teal);">Order</em></h2>
+      <p class="reveal visible d3" style="color: #2d3748; max-width:500px; margin:0 auto; font-size:14px; line-height:1.8; text-align: center;">Getting started with QUERA WATER is simple. Three easy steps to premium hydration for your business.</p>
+    </div>
+    <div class="how-steps">
+      <div class="how-step reveal visible d1">
+        <div class="how-num" style="background: linear-gradient(135deg,#0a2342,#1a7a99); border:2px solid var(--teal-accent); color: white;">1</div>
+        <div class="how-title" style="color: #081120; margin-bottom: 10px;">Get in Touch</div>
+        <p class="how-desc" style="color: #4a5568; font-size: 13px; line-height: 1.75;">Contact us via WhatsApp, phone, or our enquiry form. Share your requirements — quantity, bottle size, and branding needs.</p>
+      </div>
+      <div class="how-step reveal visible d2">
+        <div class="how-num" style="background: linear-gradient(135deg,#0a2342,#1a7a99); border:2px solid var(--teal-accent); color: white;">2</div>
+        <div class="how-title" style="color: #081120; margin-bottom: 10px;">Customise & Confirm</div>
+        <p class="how-desc" style="color: #4a5568; font-size: 13px; line-height: 1.75;">Our team helps design your custom label and provides a detailed quote. Once confirmed, we begin production.</p>
+      </div>
+      <div class="how-step reveal visible d3">
+        <div class="how-num" style="background: linear-gradient(135deg,#0a2342,#1a7a99); border:2px solid var(--teal-accent); color: white;">3</div>
+        <div class="how-title" style="color: #081120; margin-bottom: 10px;">Delivered to You</div>
+        <p class="how-desc" style="color: #4a5568; font-size: 13px; line-height: 1.75;">Your order is packaged with care and delivered directly to your location, ready for immediate use.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- CONTACT -->
   <section id="contact" class="sl">
@@ -1349,45 +2831,61 @@
         <p>Whether you need a bulk water supply, custom branded bottles, or simply want to know more about QUERA WATER, our team is ready to assist.</p>
         <div class="c-items">
           <div class="c-item">
-            <div class="c-icon">📞</div>
+            <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z"/></svg></div>
             <div class="c-item-text">
               <strong>Phone / WhatsApp</strong>
-              <a href="tel:+918436103417">+91 84361 03417</a>
+              <a href="tel:+918436103417" style="display:block;">+91 84361 03417</a>
+              <a href="tel:+918859797046" style="display:block; margin-top:4px;">+91 88597 97046</a>
+              <a href="tel:+917001130170" style="display:block; margin-top:4px;">+91 70011 30170</a>
             </div>
           </div>
           <div class="c-item">
-            <div class="c-icon">📧</div>
+            <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/></svg></div>
             <div class="c-item-text">
               <strong>Email</strong>
               <a href="mailto:querawater@gmail.com">querawater@gmail.com</a>
             </div>
           </div>
           <div class="c-item">
-            <div class="c-icon">📍</div>
+            <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6"/></svg></div>
             <div class="c-item-text">
-              <strong>Manufacturing Unit</strong>
-              <span style="display:block;max-width:300px;line-height:1.6">4th Floor, One RK-407, Village Residency, Sarfabad, Sector 73, Sarfabad, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201301</span>
+              <strong>Corporate Office &amp; Unit</strong>
+              <span style="display:block;max-width:300px;line-height:1.6">Village Residency, Sarfabad, Sector 73, Noida, Gautam Buddha Nagar, Uttar Pradesh, 201301</span>
             </div>
           </div>
           <div class="c-item">
-            <div class="c-icon">📷</div>
+            <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg></div>
             <div class="c-item-text">
               <strong>Instagram</strong>
               <a href="https://instagram.com/querawater" target="_blank">@querawater</a>
             </div>
           </div>
           <div class="c-item">
-            <div class="c-icon">🕐</div>
+            <div class="c-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;">
+                <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+              </svg>
+            </div>
+            <div class="c-item-text">
+              <strong>Facebook</strong>
+              <a href="https://www.facebook.com/profile.php?id=61587350771726" target="_blank">Quera Water</a>
+            </div>
+          </div>
+          <div class="c-item">
+            <div class="c-icon"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="white" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M8 3.5a.5.5 0 0 0-1 0V9a.5.5 0 0 0 .252.434l3.5 2a.5.5 0 0 0 .496-.868L8 8.71z"/><path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16m7-8A7 7 0 1 1 1 8a7 7 0 0 1 14 0"/></svg></div>
             <div class="c-item-text">
               <strong>Working Hours</strong>
               <span>Mon – Sat: 9:00 AM – 6:00 PM</span>
             </div>
           </div>
         </div>
-        <div style="margin-top:32px">
-          <a href="https://wa.me/918436103417" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px;">
-            <span>💬</span> Chat on WhatsApp
+        <div style="margin-top:32px; display:flex; flex-direction:column; gap:16px;">
+          <a href="https://wa.me/918436103417" target="_blank" class="btn-primary" style="display:inline-flex;align-items:center;gap:10px; width: fit-content;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.98c-.202-.1-.1.195-.1.195s-.174-.087-.474-.219c-.3-.132-1.007-.497-1.162-.553-.155-.056-.268-.084-.381.084-.112.168-.437.552-.535.663-.1.11-.197.123-.399.023-.2-.1-.84-.309-1.599-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.23.296-.346.1-.115.133-.198.198-.33.065-.134.034-.253-.017-.353-.05-.1-1.2-.497-1.477-.615-.157-.066-.3-.06-.399-.04-.099.021-.26.082-.41.229-.153.147-.597.584-.597 1.424 0 .84.61 1.651.696 1.764.085.114 1.204 1.84 2.917 2.578.408.176.726.28.974.359.412.13.788.111 1.087.066.333-.05 1.007-.412 1.15-.81.144-.399.144-.739.1-.81-.043-.07-.156-.1-.358-.2"/></svg> Chat on WhatsApp
           </a>
+          <div style="width:100%; border: 1px solid rgba(43, 188, 212, 0.2); border-radius: 6px; overflow:hidden; box-shadow: 0 10px 24px rgba(0,0,0,0.3); margin-top: 10px;">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3503.7667232314546!2d77.38289877528348!3d28.583307675691178!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cf16e91f618a9%3A0x86b0391104e1e3b5!2sSarfabad%20Village%2C%20Sarfabad%2C%20Sector%2073%2C%20Noida%2C%20Uttar%20Pradesh!5e0!3m2!1sen!2sin!4v1717257900000!5m2!1sen!2sin" width="100%" height="220" style="border:0; display:block; filter: invert(90%) hue-rotate(180deg) grayscale(30%) contrast(90%);" allowfullscreen="" loading="lazy"></iframe>
+          </div>
         </div>
       </div>
       <div class="c-form reveal d3">
@@ -1433,16 +2931,79 @@
     </div>
   </section>
 
+
+  <!-- TERMS & CONDITIONS -->
+  <section id="terms" class="sg" style="border-top: 1px solid rgba(255,255,255,0.06); background: rgba(6, 21, 37, 0.85); backdrop-filter: blur(25px); position: relative; z-index: 10; padding: 80px 5% 60px;">
+    <div style="max-width: 800px; margin: 0 auto;">
+        <!-- Right: Terms & Conditions -->
+        <div class="reveal d3" style="background: rgba(10, 36, 70, 0.4); border: 1px solid rgba(43, 188, 212, 0.2); border-radius: 6px; padding: 36px; box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);">
+          <h3 style="font-family:'Cormorant Garamond',serif; font-size: 1.8rem; color: white; font-weight: 400; margin-bottom: 24px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px; letter-spacing: 0.5px; text-transform: uppercase;">Terms &amp; Conditions</h3>
+          
+          <ul style="list-style: none; display: flex; flex-direction: column; gap: 14px; padding: 0; margin: 0;">
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span>Pricing depends on the quality, color, and design of stickers.</span>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span>Sticker size and bottle size may affect the final pricing.</span>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span>Order quantity is the most important factor for pricing and production.</span>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span>Minimum order quantity may apply on customized products.</span>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <strong style="color: #00ff66;">50% advance payment is required before order confirmation.</strong>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span>Remaining 50% payment must be completed on or before the delivery/order date.</span>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span>Production time depends on customization type and order quantity.</span>
+            </li>
+            <li style="font-size: 12.5px; line-height: 1.6; color: rgba(255,255,255,0.75); display: flex; align-items: flex-start; gap: 10px;">
+              <span style="color: var(--teal-accent); font-size: 8px; margin-top: 6px; flex-shrink: 0;">◆</span>
+              <span style="color: #ff4d4d; font-weight: 600;">Customized orders cannot be cancelled after production starts.</span>
+            </li>
+          </ul>
+          
+          <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.08); text-align: right; font-size: 9px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.45);">
+            * Terms &amp; Conditions Apply.
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
   <!-- FOOTER -->
   <footer>
     <div class="footer-grid">
       <div class="footer-brand">
         <div class="fb-logo">
-          <img src="logo_crest.png" alt="Quera Logo" class="logo-img">
+          <img src="logo.png" alt="Quera Logo" class="logo-img">
           <span class="nav-text">QUERA <span>WATER</span></span>
         </div>
-        <p>Premium packaged drinking water crafted with a 5-stage purification process. FSSAI certified and BIS compliant, trusted by hotels, restaurants, and businesses across India.</p>
+        <p>Premium Natural Mineral Water &amp; Packaged Drinking Water operated by VBR BROTHERS, dedicated to delivering purity, quality, and excellence. Serving hotels, resorts, restaurants, corporate offices, and events across India.</p>
         <span class="fb-cert">✅ FSSAI Certified Producer</span>
+        <div class="f-social-icons" style="display: flex; gap: 12px; margin-top: 20px;">
+          <a href="https://wa.me/918436103417" target="_blank" class="social-fab wa" aria-label="Chat on WhatsApp" style="color: white; width: 38px; height: 38px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px; transition: all 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.98c-.202-.1-.1.195-.1.195s-.174-.087-.474-.219c-.3-.132-1.007-.497-1.162-.553-.155-.056-.268-.084-.381.084-.112.168-.437.552-.535.663-.1.11-.197.123-.399.023-.2-.1-.84-.309-1.599-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.23.296-.346.1-.115.133-.198.198-.33.065-.134.034-.253-.017-.353-.05-.1-1.2-.497-1.477-.615-.157-.066-.3-.06-.399-.04-.099.021-.26.082-.41.229-.153.147-.597.584-.597 1.424 0 .84.61 1.651.696 1.764.085.114 1.204 1.84 2.917 2.578.408.176.726.28.974.359.412.13.788.111 1.087.066.333-.05 1.007-.412 1.15-.81.144-.399.144-.739.1-.81-.043-.07-.156-.1-.358-.2"/></svg>
+          </a>
+          <a href="https://instagram.com/querawater" target="_blank" class="social-fab ig" aria-label="Follow us on Instagram" style="color: white; width: 38px; height: 38px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px; transition: all 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/></svg>
+          </a>
+          <a href="https://www.facebook.com/profile.php?id=61587350771726" target="_blank" class="social-fab fb" aria-label="Follow us on Facebook" style="color: white; width: 38px; height: 38px; background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; font-size: 15px; transition: all 0.3s;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/></svg>
+          </a>
+        </div>
         <div style="margin-top:20px;">
           <a href="order.html" class="btn-primary" style="display:inline-flex; align-items:center; gap:8px; padding:10px 22px; font-size:11px; text-decoration:none; box-shadow:0 4px 15px rgba(43,188,212,.3);">
             🛒 Shop / Order Online
@@ -1454,7 +3015,7 @@
         <ul>
           <li><a href="order.html" style="color:var(--teal-accent); font-weight:700;">🛒 Shop Online</a></li>
           <li><a href="#about">About Us</a></li>
-          <li><a href="#purity">Our Process</a></li>
+          <li><a href="#purification-timeline">Our Process</a></li>
           <li><a href="#minerals">Water Quality</a></li>
           <li><a href="#hospitality">Hospitality</a></li>
           <li><a href="#labels">Custom Labels</a></li>
@@ -1465,9 +3026,9 @@
       <div class="footer-col">
         <h5>Products</h5>
         <ul>
-          <li><a href="#order">200ml Bottle</a></li>
-          <li><a href="#order">500ml Bottle</a></li>
-          <li><a href="#order">1L Bottle</a></li>
+          <li><a href="order.html">200ml Bottle</a></li>
+          <li><a href="order.html">500ml Bottle</a></li>
+          <li><a href="order.html">1L Bottle</a></li>
           <li><a href="#labels">Hotel Branding</a></li>
           <li><a href="#labels">Restaurant Labels</a></li>
           <li><a href="#labels">Corporate Labels</a></li>
@@ -1484,9 +3045,24 @@
 </div><!-- end .content -->
 
 <!-- WhatsApp FAB -->
-<a href="https://wa.me/918436103417" target="_blank" class="wa-btn" title="Chat on WhatsApp" id="waBtn">💬</a>
+<a href="https://wa.me/918436103417" target="_blank" class="wa-btn" title="Book Free Water Test" id="waBtn"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16" style="vertical-align: middle; display: inline-block;"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.69-4.98c-.202-.1-.1.195-.1.195s-.174-.087-.474-.219c-.3-.132-1.007-.497-1.162-.553-.155-.056-.268-.084-.381.084-.112.168-.437.552-.535.663-.1.11-.197.123-.399.023-.2-.1-.84-.309-1.599-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.09-.088.197-.23.296-.346.1-.115.133-.198.198-.33.065-.134.034-.253-.017-.353-.05-.1-1.2-.497-1.477-.615-.157-.066-.3-.06-.399-.04-.099.021-.26.082-.41.229-.153.147-.597.584-.597 1.424 0 .84.61 1.651.696 1.764.085.114 1.204 1.84 2.917 2.578.408.176.726.28.974.359.412.13.788.111 1.087.066.333-.05 1.007-.412 1.15-.81.144-.399.144-.739.1-.81-.043-.07-.156-.1-.358-.2"/></svg></a>
 
 <script>
+  // Theme Switcher Toggle
+  const themeToggle = document.getElementById('themeToggle');
+  if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('light-theme');
+      const isLight = document.body.classList.contains('light-theme');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+    });
+  }
+
+  // Apply saved theme
+  if (localStorage.getItem('theme') === 'light') {
+    document.body.classList.add('light-theme');
+  }
+
   // Navbar scroll effect
   const navbar = document.getElementById('navbar');
   window.addEventListener('scroll', () => {
@@ -1561,7 +3137,248 @@
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
       closeLightbox();
+      closeReviewModal();
     }
+  });
+
+  // --- Write Review Feature ---
+  let selectedRating = 5;
+  
+  window.openReviewModal = function() {
+    const modal = document.getElementById('reviewLightbox');
+    if (modal) {
+      modal.style.display = 'flex';
+      setRating(5);
+    }
+  }
+  
+  window.closeReviewModal = function() {
+    const modal = document.getElementById('reviewLightbox');
+    if (modal) {
+      modal.style.display = 'none';
+    }
+  }
+  
+  window.setRating = function(rating) {
+    selectedRating = rating;
+    const input = document.getElementById('rev-rating');
+    if (input) input.value = rating;
+    
+    const stars = document.querySelectorAll('#starRating .star');
+    stars.forEach((star, index) => {
+      if (index < rating) {
+        star.style.color = 'var(--gold-accent)';
+      } else {
+        star.style.color = 'rgba(255, 255, 255, 0.2)';
+      }
+    });
+  }
+  
+  window.handleReviewSubmit = function(e) {
+    e.preventDefault();
+    const name = document.getElementById('rev-name').value.trim();
+    const role = document.getElementById('rev-role').value.trim();
+    const rating = parseInt(document.getElementById('rev-rating').value, 10);
+    const highlight = document.getElementById('rev-highlight').value.trim();
+    const message = document.getElementById('rev-message').value.trim();
+    
+    const newReview = { name, role, rating, highlight, message };
+    
+    let localReviews = [];
+    try {
+      const saved = localStorage.getItem('quera_reviews');
+      if (saved) localReviews = JSON.parse(saved);
+    } catch (err) {
+      console.error(err);
+    }
+    
+    localReviews.push(newReview);
+    localStorage.setItem('quera_reviews', JSON.stringify(localReviews));
+    
+    document.getElementById('writeReviewForm').reset();
+    closeReviewModal();
+    
+    alert("Thank you for your valuable review!");
+    renderReviews();
+  }
+  
+  window.renderReviews = function() {
+    const grid = document.getElementById('testimonialsGrid');
+    if (!grid) return;
+    
+    document.querySelectorAll('.dynamic-review-card').forEach(el => el.remove());
+    
+    let localReviews = [];
+    try {
+      const saved = localStorage.getItem('quera_reviews');
+      if (saved) localReviews = JSON.parse(saved);
+    } catch (err) {
+      console.error(err);
+    }
+    
+    localReviews.forEach(rev => {
+      const starsStr = '★'.repeat(rev.rating) + '☆'.repeat(5 - rev.rating);
+      const card = document.createElement('div');
+      card.className = 'testimonial-card dynamic-review-card';
+      
+      const initials = rev.name.split(' ').map(n => n[0]).join('').substring(0, 2).toUpperCase() || 'U';
+      
+      card.innerHTML = `
+        <div>
+          <div class="review-stars">${starsStr}</div>
+          <p class="review-text">"${rev.message}"</p>
+          ${rev.highlight ? `<div class="review-highlight">${rev.highlight}</div>` : ''}
+        </div>
+        <div class="reviewer-info">
+          <div class="reviewer-avatar" style="background: linear-gradient(135deg, var(--teal-accent), var(--mountain-teal))">${initials}</div>
+          <div class="reviewer-details">
+            <strong>${rev.name}</strong>
+            <span>${rev.role}</span>
+          </div>
+        </div>
+      `;
+      grid.appendChild(card);
+    });
+  }
+  
+  // Close review modal on click outside
+  const reviewLightbox = document.getElementById('reviewLightbox');
+  if (reviewLightbox) {
+    reviewLightbox.addEventListener('click', (e) => {
+      if (e.target === reviewLightbox) {
+        closeReviewModal();
+      }
+    });
+  }
+
+  // Render dynamic reviews on load
+  renderReviews();
+
+
+
+  // Remove Loader on Load
+  window.addEventListener('load', () => {
+    const splash = document.getElementById('pwaSplash');
+    if (splash) {
+      splash.style.opacity = '0';
+      splash.style.visibility = 'hidden';
+      setTimeout(() => {
+        splash.style.display = 'none';
+      }, 800);
+    }
+  });
+
+  // Floating Hero Bubbles Generator
+  const bubbleContainer = document.getElementById('heroBubblesContainer');
+  if (bubbleContainer) {
+    const createBubble = () => {
+      const bubble = document.createElement('div');
+      bubble.classList.add('hero-bubble');
+      
+      const size = Math.random() * 40 + 12; // 12px to 52px
+      const left = Math.random() * 100;
+      const duration = Math.random() * 5 + 6;
+      const delay = Math.random() * 3;
+      const drift = (Math.random() * 100) - 50;
+      
+      bubble.style.width = `${size}px`;
+      bubble.style.height = `${size}px`;
+      bubble.style.left = `${left}%`;
+      bubble.style.animationDuration = `${duration}s`;
+      bubble.style.animationDelay = `${delay}s`;
+      bubble.style.setProperty('--drift', `${drift}px`);
+      
+      bubbleContainer.appendChild(bubble);
+      
+      setTimeout(() => { bubble.remove(); }, (duration + delay) * 1000);
+    };
+    for (let i = 0; i < 15; i++) { createBubble(); }
+    setInterval(createBubble, 800);
+  }
+
+  // Mouse click ripple effect
+  document.addEventListener('click', (e) => {
+    const ripple = document.createElement('div');
+    ripple.classList.add('click-ripple');
+    ripple.style.left = `${e.clientX}px`;
+    ripple.style.top = `${e.clientY}px`;
+    document.body.appendChild(ripple);
+    setTimeout(() => { ripple.remove(); }, 800);
+  });
+
+  // Statistics Counter Animation
+  const countUp = (el, maxVal) => {
+    let current = 0;
+    const duration = 2000; // 2s
+    const stepTime = Math.abs(Math.floor(duration / maxVal));
+    const timer = setInterval(() => {
+      current += Math.ceil(maxVal / 60);
+      if (current >= maxVal) {
+        current = maxVal;
+        clearInterval(timer);
+      }
+      el.textContent = current.toLocaleString() + (el.dataset.suffix || '');
+    }, 30);
+  };
+
+  const counterSection = document.getElementById('stats-counter');
+  let animated = false;
+  if (counterSection) {
+    const observerCounter = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting && !animated) {
+          animated = true;
+          document.querySelectorAll('.stat-counter-val').forEach(el => {
+            const target = parseInt(el.getAttribute('data-target'));
+            countUp(el, target);
+          });
+        }
+      });
+    }, { threshold: 0.2 });
+    observerCounter.observe(counterSection);
+  }
+
+  // Interactive timeline scroll listener
+  const timelineSection = document.getElementById('purification-timeline');
+  if (timelineSection) {
+    const observerTimeline = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const nodes = document.querySelectorAll('.timeline-node');
+          const progressActive = document.querySelector('.timeline-progress-active');
+          
+          nodes.forEach((node, index) => {
+            setTimeout(() => {
+              node.classList.add('active');
+              if (progressActive) {
+                const pct = ((index) / (nodes.length - 1)) * 100;
+                progressActive.style.width = `${pct}%`;
+                progressActive.style.height = `${pct}%`;
+              }
+            }, index * 400);
+          });
+        }
+      });
+    }, { threshold: 0.15 });
+    observerTimeline.observe(timelineSection);
+  }
+
+  // 3D Tilt Card Effects
+  document.querySelectorAll('.perspective-card').forEach(card => {
+    card.addEventListener('mousemove', (e) => {
+      const rect = card.getBoundingClientRect();
+      const x = e.clientX - rect.left;
+      const y = e.clientY - rect.top;
+      const xc = rect.width / 2;
+      const yc = rect.height / 2;
+      const angleX = (yc - y) / 15; // max 10deg
+      const angleY = (x - xc) / 15; // max 10deg
+      card.style.transform = `rotateX(${angleX}deg) rotateY(${angleY}deg) translateY(-8px)`;
+    });
+    
+    card.addEventListener('mouseleave', () => {
+      card.style.transform = 'rotateX(0deg) rotateY(0deg) translateY(0px)';
+    });
   });
 
   // PWA Service Worker Registration
@@ -1570,6 +3387,67 @@
       navigator.serviceWorker.register('./sw.js')
         .then(reg => console.log('PWA Service Worker Registered!'))
         .catch(err => console.error('PWA Service Worker registration failed:', err));
+    });
+  }
+</script>
+
+<!-- ═══ PWA INSTALL FLOATING BANNER ═══ -->
+<div id="pwaInstallBanner" style="position:fixed; bottom:24px; left:5%; right:5%; background:rgba(10,36,70,0.92); border:1px solid rgba(43,188,212,0.35); backdrop-filter:blur(20px); border-radius:8px; padding:14px 18px; display:none; align-items:center; justify-content:space-between; z-index:99999; box-shadow:0 12px 40px rgba(0,0,0,0.5); animation: pwaSlideUp 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); gap:16px;">
+  <div style="display:flex; align-items:center; gap:12px; flex:1;">
+    <img src="logo.png" alt="Quera Logo" style="width:36px; height:auto; filter:drop-shadow(0 0 5px rgba(43, 188, 212, 0.5));">
+    <div>
+      <h4 style="color:white; font-size:11px; font-weight:700; margin:0; letter-spacing:1px; font-family:'Montserrat',sans-serif;">INSTALL QUERA WATER APP</h4>
+      <p style="color:rgba(255,255,255,0.7); font-size:9.5px; margin:2px 0 0; line-height:1.3; font-family:'Montserrat',sans-serif;">Install on your home screen for fullscreen mobile app look!</p>
+    </div>
+  </div>
+  <div style="display:flex; align-items:center; gap:8px;">
+    <button id="pwaInstallBtn" style="background:linear-gradient(135deg,#1a7a99,#2bbcd4); border:none; color:white; font-size:10px; font-weight:700; padding:8px 14px; border-radius:4px; cursor:pointer; letter-spacing:1px; text-transform:uppercase; font-family:'Montserrat',sans-serif; box-shadow:0 4px 10px rgba(43,188,212,0.25);">Install</button>
+    <button id="pwaCloseBannerBtn" style="background:none; border:none; color:rgba(255,255,255,0.5); font-size:14px; cursor:pointer; padding:4px 8px;">✕</button>
+  </div>
+</div>
+
+<style>
+  @keyframes pwaSlideUp {
+    from { transform: translateY(100px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+</style>
+
+<script>
+  // PWA Custom Installation Handler
+  let deferredPrompt;
+  const installBanner = document.getElementById('pwaInstallBanner');
+  const installBtn = document.getElementById('pwaInstallBtn');
+  const closeBannerBtn = document.getElementById('pwaCloseBannerBtn');
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+      return;
+    }
+    if (installBanner) {
+      setTimeout(() => {
+        installBanner.style.display = 'flex';
+      }, 4000);
+    }
+  });
+
+  if (installBtn) {
+    installBtn.addEventListener('click', async () => {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        const { outcome } = await deferredPrompt.userChoice;
+        console.log(`User response to install: ${outcome}`);
+        deferredPrompt = null;
+        if (installBanner) installBanner.style.display = 'none';
+      }
+    });
+  }
+
+  if (closeBannerBtn) {
+    closeBannerBtn.addEventListener('click', () => {
+      if (installBanner) installBanner.style.display = 'none';
     });
   }
 </script>

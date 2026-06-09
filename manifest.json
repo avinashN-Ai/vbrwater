@@ -2,17 +2,40 @@
   "name": "QUERA WATER — Premium Packaged Drinking Water",
   "short_name": "Quera Water",
   "description": "Premium packaged drinking water brand. Custom branded labels for hotels, resorts & restaurants.",
+  "id": "./index.html",
   "start_url": "./index.html",
   "display": "standalone",
   "background_color": "#061525",
   "theme_color": "#0a2342",
   "orientation": "portrait",
+  "categories": [
+    "shopping",
+    "food",
+    "business",
+    "lifestyle"
+  ],
   "icons": [
     {
       "src": "app_icon.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "gallery-purple.jpg",
+      "sizes": "1080x1350",
+      "type": "image/jpeg",
+      "form_factor": "narrow",
+      "label": "Quera Premium Hydration Campaign"
+    },
+    {
+      "src": "background.jpg",
+      "sizes": "1920x1080",
+      "type": "image/jpeg",
+      "form_factor": "wide",
+      "label": "Quera Beautiful Mountain Sourced Landscape"
     }
   ]
 }

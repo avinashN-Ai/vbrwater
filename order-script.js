@@ -45,8 +45,8 @@ const products = {
   },
   'qty-500ml': {
     name: 'Quera Premium 500ml',
-    price: 240,
-    pack: 'Case of 24',
+    price: 200,
+    pack: 'Case of 20',
     img: 'bottle-750ml.png'
   },
   'qty-1l': {
@@ -69,6 +69,21 @@ let cart = {
   'qty-1l': 0,
   'qty-premium-1l': 0
 };
+
+// Load cart from localStorage if present
+try {
+  const savedCart = localStorage.getItem('quera_cart');
+  if (savedCart) {
+    const parsed = JSON.parse(savedCart);
+    Object.keys(cart).forEach(key => {
+      if (typeof parsed[key] === 'number') {
+        cart[key] = Math.max(0, parsed[key]);
+      }
+    });
+  }
+} catch (e) {
+  console.error('Failed to parse cart from localStorage:', e);
+}
 
 // Toggle Cart Drawer
 window.toggleCartDrawer = function(isOpen) {
@@ -119,6 +134,27 @@ document.addEventListener('DOMContentLoaded', () => {
       toggleMobileMenu(false);
     }
   });
+
+  // Load name & address from localStorage
+  const savedName = localStorage.getItem('quera_order_name');
+  const savedAddress = localStorage.getItem('quera_order_address');
+  const nameInput = document.getElementById('order-name');
+  const addressInput = document.getElementById('order-address');
+  
+  if (savedName && nameInput) nameInput.value = savedName;
+  if (savedAddress && addressInput) addressInput.value = savedAddress;
+
+  // Add change listeners to save them dynamically
+  if (nameInput) {
+    nameInput.addEventListener('input', () => {
+      localStorage.setItem('quera_order_name', nameInput.value.trim());
+    });
+  }
+  if (addressInput) {
+    addressInput.addEventListener('input', () => {
+      localStorage.setItem('quera_order_address', addressInput.value.trim());
+    });
+  }
 });
 
 // Initialize Toast Container for Premium Feedback
@@ -192,6 +228,13 @@ window.setCartQty = function(productId, value) {
 
 // Update Cart Badge Count & Subtotal Invoice
 window.updateCartUI = function() {
+  // Save cart state to localStorage on every update
+  try {
+    localStorage.setItem('quera_cart', JSON.stringify(cart));
+  } catch (e) {
+    console.error('Failed to save cart to localStorage:', e);
+  }
+
   let totalItems = 0;
   let subtotal = 0;
   const itemsContainer = document.getElementById('cartItemsList');
@@ -320,8 +363,69 @@ window.submitWaOrder = function() {
   msg += `• Address: ${address}\n\n`;
   msg += 'Please confirm availability and dispatch schedule. Thank you!';
 
+  // Inject summary items in success modal dynamically
+  const summaryContainer = document.getElementById('successSummaryItems');
+  if (summaryContainer) {
+    summaryContainer.innerHTML = '';
+    Object.keys(cart).forEach(id => {
+      const qty = cart[id];
+      if (qty > 0) {
+        const prod = products[id];
+        const itemRow = document.createElement('div');
+        itemRow.style.cssText = 'display:flex; justify-content:space-between; margin-bottom: 4px;';
+        itemRow.innerHTML = `<span>${prod.name} (x${qty})</span><span>₹${(qty * prod.price).toLocaleString('en-IN')}</span>`;
+        summaryContainer.appendChild(itemRow);
+      }
+    });
+    if (hasCustomLabels) {
+      const itemRow = document.createElement('div');
+      itemRow.style.cssText = 'display:flex; justify-content:space-between; margin-bottom: 4px;';
+      itemRow.innerHTML = `<span>Custom Labels plate fee</span><span>₹7,000</span>`;
+      summaryContainer.appendChild(itemRow);
+    }
+  }
+  
+  const payableEl = document.getElementById('successPayableVal');
+  if (payableEl) {
+    payableEl.textContent = '₹' + grandTotal.toLocaleString('en-IN');
+  }
+  
+  // Show Success Modal
+  const modal = document.getElementById('successModal');
+  if (modal) {
+    modal.style.display = 'flex';
+    modal.style.visibility = 'visible';
+    setTimeout(() => {
+      modal.style.opacity = '1';
+    }, 50);
+  }
+
   const waUrl = 'https://wa.me/918436103417?text=' + encodeURIComponent(msg);
   window.open(waUrl, '_blank');
+}
+
+// Success Modal Close & Cart Clear Handler
+window.closeSuccessModal = function() {
+  const modal = document.getElementById('successModal');
+  if (modal) {
+    modal.style.opacity = '0';
+    setTimeout(() => {
+      modal.style.display = 'none';
+      modal.style.visibility = 'hidden';
+    }, 400);
+  }
+  
+  // Clean cart state
+  cart = {
+    'qty-200ml': 0,
+    'qty-500ml': 0,
+    'qty-1l': 0,
+    'qty-premium-1l': 0
+  };
+  
+  // Update UI and localStorage
+  updateCartUI();
+  toggleCartDrawer(false);
 }
 
 // Initial Cart Setup
